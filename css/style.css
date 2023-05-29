@@ -6,17 +6,15 @@
 body {
     background: #FFFAEA;
     font-family: 'Rubik', sans-serif;
-    ;
-
 }
 
 header {
     width: 100%;
     overflow: hidden;
     background: #3456c7;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'Oswald', sans-serif;
-    ;
+    height: 100px;
 }
 
 .wrapper {
@@ -29,15 +27,16 @@ header {
 
 header .logo {
     color: beige;
-    font-size: 50px;
-    line-height: 200px;
+    font-size: 10px;
+    line-height: 100px;
     float: left;
     font-family: 'Oswald', sans-serif;
 }
 
 header nav {
+    font-size: 8px;
     float: right;
-    line-height: 200px;
+    line-height: 100px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -45,9 +44,9 @@ header nav a {
     display: inline-block;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 10px;
     line-height: normal;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
