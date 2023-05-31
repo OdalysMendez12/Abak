@@ -202,3 +202,67 @@ input{
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
+
+/*Nosotros*/
+#sectionA{
+    width: 100%;
+    min-height: 100vh;
+}
+.container_nosotros{
+    width: 80%;
+    display: block;
+    margin:auto;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    padding-top: 100px;
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 35px rgba(115, 98, 202, 0.7);
+}
+.content-section .content h3{
+    margin-top: 20px;
+    color:#000000;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top:200px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+.content-section .content p{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+.content-section .content .button{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content-section .content .button a{
+    background-color: black;
+    padding:12px 40px;
+    text-decoration: none;
+    color:  white;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    border: 1px solid white;
+}
+.content-section .content .button a:hover{
+    border: 1px solid black;
+    background-color: white;
+    color:black;
+}
