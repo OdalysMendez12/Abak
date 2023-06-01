@@ -15,15 +15,17 @@
     <title>Abak Soluciones</title>
 </head>
 <body>
-    <div class="contenedor">
-        <h2>Iniciar Sesión</h2>
-        <div class="form-group">
-            <input id="user" type="text" class="form-control" name="username" placeholder="Usuario">
-            <input id="password" type="text" class="form-control" name="password" placeholder="Contraseña">
-            <br>
-            <button id="boton" class="boton" onclick="login()">Iniciar Sesión</button>
-            <p>¿Olvidaste tu contraseña?</p>
+    <form class="formulario" action="login.php" method="POST">
+        <div class="contenedor">
+            <h2>Iniciar Sesión</h2>
+            <div class="form-group">
+                <input type="email" class="form-control" name="correo" placeholder="Correo Electronico">
+                <input type="password" class="form-control" name="contrasena" placeholder="Contraseña">
+                <br>
+                <input type="submit" name="enviar" value="Iniciar Sesión" class="boton" />
+                <p>¿Olvidaste tu contraseña?</p>
+            </div>
         </div>
-    </div>
+</form>
 </body>
 </html>
