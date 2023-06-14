@@ -23,7 +23,6 @@
                 <input type="password" class="form-control" name="contrasena" placeholder="Contraseña">
                 <br>
                 <input type="submit" name="enviar" value="Iniciar Sesión" class="boton" />
-                <p>¿Olvidaste tu contraseña?</p>
             </div>
         </div>
 </form>
