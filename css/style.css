@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     background: #FFFAEA;
     font-family: 'Rubik', sans-serif;
 }
 
+/*header*/
 header {
     width: 100%;
     overflow: hidden;
@@ -16,7 +16,6 @@ header {
     font-family: 'Oswald', sans-serif;
     height: 100px;
 }
-
 .wrapper {
     width: 90%;
     max-width: 1000px;
@@ -24,7 +23,6 @@ header {
     overflow: hidden;
     font-family: 'Oswald', sans-serif;
 }
-
 header .logo {
     color: beige;
     font-size: 10px;
@@ -32,14 +30,12 @@ header .logo {
     float: left;
     font-family: 'Oswald', sans-serif;
 }
-
 header nav {
     font-size: 8px;
     float: right;
     line-height: 100px;
     font-family: 'Oswald', sans-serif;
 }
-
 header nav a {
     display: inline-block;
     color: #ffffff;
@@ -54,33 +50,27 @@ header nav a {
     border-radius: 30px;
     font-family: 'Oswald', sans-serif;
 }
-
 header nav a:hover {
     background: #041036;
     font-family: 'Oswald', sans-serif;
 }
-
 .header2 {
     position: fixed;
     height: 100px;
     font-family: 'Oswald', sans-serif;
 }
-
 .header2 .logo {
     line-height: 100px;
     font-size: 30px;
     font-family: 'Oswald', sans-serif;
 }
-
 .header2 nav {
     line-height: 100px;
     font-family: 'Oswald', sans-serif;
 }
-
 .contenido p {
     margin-bottom: 1rem;
 }
-
 @media screen and (max-width: 900px) {
     header .logo,
     header nav {
@@ -88,11 +78,9 @@ header nav a:hover {
         text-align: center;
         line-height: 100px;
     }
-
     .header2 {
         height: auto;
     }
-
     .header2 .logo,
     .header2 nav {
         line-height: 50px;
@@ -104,25 +92,23 @@ header nav a:hover {
     width: 100%;
     background-color: #041036;
 }
-
 .footer .grupo-1 {
     width: 100%;
     max-width: 1200px;
-    margin:auto;
-    display:flex;
+    margin: auto;
+    display: flex;
     padding: 45px 0px;
     justify-content: center;
     align-items: center;
+    height: 20px;
 }
-
 .footer .grupo-1 .box h2 {
     color: beige;
     margin-bottom: 25px;
     font-size: 20px;
     margin-left: 20px;
 }
-
-.footer .grupo-1 .redesSociales a{
+.footer .grupo-1 .redesSociales a {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -134,27 +120,149 @@ header nav a:hover {
     text-align: center;
     transition: all 300ms ease;
 }
-
-.footer .grupo-1 .redesSociales a:hover{
-color: #3456c7;
+.footer .grupo-1 .redesSociales a:hover {
+    color: #3456c7;
 }
-
-.footer .grupo-2{
+.footer .grupo-2 {
     background-color: #364780;
     padding: 15px 10px;
     text-align: center;
-    color: white; 
+    color: white;
 }
-
-.footer .grupo-2 small{
+.footer .grupo-2 small {
     font-size: 15px;
 }
-
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) {
     .footer .grupo-1 {
         width: 90%;
         max-width: 1200px;
         margin: auto;
         padding: 35 px 0px;
-    }   
+    }
+}
+
+/*Login*/
+.contenedor {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/login.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    gap: 60px;
+}
+.contenedor h2{
+    color: beige;
+    margin-bottom: 25px;
+    font-size: 40px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+input{
+    outline: 0;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 30px;
+    margin: 0 0 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.boton{
+    font-family: 'Rubik', sans-serif;    
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+    border-radius: 30px;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #041036;
+    font-size: 15px;
+    transition: all 0.5 ease;
+    cursor: pointer;
+}
+.boton:hover {
+    background: #9da7c5;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background-color: #3f4042;
+    max-width: 360px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Nosotros*/
+#sectionA{
+    width: 100%;
+    min-height: 100vh;
+}
+.container_nosotros{
+    width: 80%;
+    display: block;
+    margin:auto;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.image-section{
+    padding-top: 100px;
+    float: right;
+    width: 40%;
+}
+.image-section img{
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 35px rgba(115, 98, 202, 0.7);
+}
+.content-section .content h3{
+    margin-top: 20px;
+    color:#000000;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top:200px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+.content-section .content p{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+.content-section .content .button{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content-section .content .button a{
+    background-color: black;
+    padding:12px 40px;
+    text-decoration: none;
+    color:  white;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    border: 1px solid white;
+}
+.content-section .content .button a:hover{
+    border: 1px solid black;
+    background-color: white;
+    color:black;
 }
