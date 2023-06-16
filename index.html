@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="./js/swiper-bundle.min.js"></script>
     <script
         src="<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');</style>"></script>
     <script
@@ -17,66 +21,47 @@
 </head>
 
 <body>
-    <!-- Inicio Header -->
+    <!--Inicio Header--
     <header>
-        <div id="logo"><img src="img/logo.png" style="width: 80%; height: 70px;" href="/index.html"></div>
-        <span class="inicio-sesion"><a href="i_sesion.php"><i class="fas fa-user"></i></a></span>
-        <span class="Contactanos"><a href="/contactanos.html">Contáctanos</a></span>
-        <span class="Servicios"><a href="/servicios.html">Servicios</a></span>
-        <span class="Quienes-somos"><a href="/quienessomos.html">Quiénes Somos</a></span>
-        <span class="Inicio"> <a href="/index.html">Inicio</a></span>
+        <div id=" logo"><img src="./img/logo.png" style="width: 120px; height: 80px;"></a>
+        </div>
+        <span class="vistasIniciales"><a href="/i_sesion.php" class="fas fa-user"></a></span>
+        <span class="vistasIniciales"><a href="/contactanos.html">Contáctanos</a></span>
+        <span class="vistasIniciales"><a href="/servicios.html">Servicios</a></span>
+        <span class="vistasIniciales"><a href="/quienessomos.html">Quiénes Somos</a></span>
+        <span class="vistasIniciales"><a href="/index.html">Inicio</a></span>
     </header>
-    <!-- Fin Header -->
-    <div class="slider">
-        <div class="myslide fade">
-            <div class="texto">
-                <h1>A´BAK Soluciones y Asociados</h1>
-                <p>TECNOLOGÍAS DE INFORMÁTICA A TU MEDIDA</p>
+    <!--Fin Header-->
+    <!--Inicio Banners-->
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+            <div class="slide swiper-slide">
+                <img src="./img/banner.jpg" alt="" class="imagenes" />
+                <div class="contenidoImagen">
+                    <h1>A´BAK Soluciones y Asociados</h1>
+                    <h2>TECNOLOGÍAS DE INFORMÁTICA A TU MEDIDA <br> </2>
+                        <a href="/servicios.html" class="button">Saber Más</a>
+                </div>
             </div>
-<<<<<<< Updated upstream
-            <img src="./img/banner.jpg">
-=======
-            <img src="/img/banner.jpg" style="width: 100%; height: 100%;">
->>>>>>> Stashed changes
-        </div>
-
-        <div class="myslide fade">
-            <div class="texto">
-                <h1>A´BAK Soluciones y Asociados</h1>
-                <p>Contamos con un portafolio de atención en el ramo de seguridad informática,
-                    redes, desarrollo, venta de equipo de cómputo, etc. Todo lo necesario para
-                    la operación de tunegocio.</p>
+            <div class="slide swiper-slide">
+                <img src="./img/banner2.jpg" alt="" class="imagenes" />
+                <div class="contenidoImagen">
+                    <p>Contamos con un portafolio de atención en el ramo de seguridad informática, redes, desarrollo, venta de equipo de cómputo, etc. Todo lo necesario para la operación de tu negocio.</p>
+                </div>
             </div>
-<<<<<<< Updated upstream
-            <img src="./img/banner2.jpg">
-=======
-            <img src="/img/banner2.jpg" style="width: 100%; height: 100%;">
->>>>>>> Stashed changes
-        </div>
-
-        <div class="myslide fade">
-            <div class="texto">
-                <h1>A´BAK Soluciones y Asociados</h1>
-                <p>Con la integración de nuestros aliados y distribuidores de las marcas más reconocidas a nivel
-                    internacional,
-                    estamos preparados para superar cualquier expectativa en el ramo de Tecnologías de información. </p>
+            <div class="slide swiper-slide">
+                <img src="./img/banner3.jpg" alt="" class="imagenes" />
+                <div class="contenidoImagen">
+                    <p>Con la integración de nuestros aliados y distribuidores de las marcas más reconocidas a nivel internacional, estamos preparados para superar cualquier expectativa en el ramo de Tecnologías de información.</p>
+                </div>
             </div>
-<<<<<<< Updated upstream
-            <img src="./img/banner3.jpg">
-=======
-            <img src="/img/banner3.jpg" style="width: 100%; height: 100%;">
->>>>>>> Stashed changes
         </div>
-
-        <a class="anterior" onclick="plusSlides(-1)">&#10094</a>
-        <a class="posterior" onclick="plusSlides(1)">&#10095</a>
-        <div class="dotsbox">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div>
-
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <!--FinBanners-->
+    
     <!--Inicio Footer-->
     <footer class="footer">
         <div class="grupo-1">
