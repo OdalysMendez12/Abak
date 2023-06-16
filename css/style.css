@@ -5,328 +5,212 @@
     box-sizing: border-box;
 }
 
-.banners .miBanner img {
-    width: 100%;
-    height: 100%;
+html {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
 }
 
+/*Banner*/
+#banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/banner.jpg);
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .info a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+/*Header*/
 header {
-    height: 60px;
+    height: 65px;
     width: 100%;
     position: absolute;
     top: 0;
-    z-index: 2;
+    z-index: 6;
 }
 
 #logo {
     display: inline-block;
     cursor: pointer;
-    margin-left: 30px;
-    padding-top: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
-.Inicio {
+.vistasIniciales {
     float: right;
     line-height: 60px;
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
-.Inicio a {
+.vistasIniciales a {
     color: #ffffff;
     font-weight: bold;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
-.Quienes-somos {
-    float: right;
-    line-height: 60px;
-    margin-right: 40px;
+.vistasIniciales a:hover {
+    color: #000000;
 }
 
-.Quienes-somos a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-.Servicios {
-    float: right;
-    line-height: 60px;
-    margin-right: 40px;
-}
-
-.Servicios a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.Contactanos {
-    float: right;
-    line-height: 60px;
-    margin-right: 40px;
-
-}
-
-.Contactanos a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-.inicio-sesion {
-    float: right;
-    line-height: 60px;
-    margin-right: 40px;
-}
-
-.inicio-sesion a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-.act {
-    padding: 12px;
-}
-
-.Inicio,
-a:hover {
-    color: #3456c7;
-}
-
-.Contactanos a:hover {
-    color: #3456c7;
-}
-
-.Quienes-somos a:hover {
-    color: #3456c7;
-}
-
-.Servicios a:hover {
-    color: #3456c7;
-}
-
-.inicio-sesion a:hover {
-    color: #3456c7;
-}
-
-.banners {
-    position: relative;
+/*Banners*/
+.main {
+    height: 100vh;
     width: 100%;
-    background: #818181;
-    ;
 }
 
-.miBanner {
-    height: 655px;
+.wrapper,
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;  
+}
+.slide{
     overflow: hidden;
-    display: none;
+}
+.slide::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.400);
+    z-index: 10;
 }
 
-.anterior,
-.posterior {
+.slide .imagenes {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide .contenidoImagen {
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%);
-    font-size: 50px;
-    padding: 15px;
-    cursor: pointer;
-    color: #ffffff;
-    transition: 2s;
-    user-select: none;
-}
-
-.anterior:hover,
-.posterior:hover {
-    color: #3456c7;
-}
-
-.posterior {
-    right: 0;
-}
-
-.dotsbox {
-    text-align: center;
-    position: absolute;
     left: 50%;
-    transform: translate(-50%);
-    bottom: 20px;
-    cursor: pointer;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 100;
 }
-
-.dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 3px solid #ffffff;
-    border-radius: 50%;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-.active,
-.dot:hover {
-    border-color: #000000;
-}
-
-.texto {
-    position: absolute;
-    color: #ffffff;
-    letter-spacing: 2px;
-    line-height: 35px;
-    top: 40%;
-    left: 15%;
-    -webkit-animation-name: posi;
-    -webkit-animation-duration: 2s;
-    animation-name: posi;
-    animation-duration: 2s;
-    z-index: 1;
-}
-
-@-webkit-keyframes posi {
-    from {
-        left: 25%;
-    }
-
-    to {
-        left: 15%;
-    }
-}
-
-@keyframes posi {
-    from {
-        left: 25%;
-    }
-
-    to {
-        left: 15%;
-    }
-}
-
-.texto h1 {
-    color: aliceblue;
-    margin: 25px;
-    font-weight: bold;
+.contenidoImagen h1 {
     font-size: 3rem;
-}
-
-.texto p {
     font-weight: bold;
+    color: #ffffff;
+}
+.contenidoImagen h2 {
     font-size: 1.5rem;
+    font-weight: 400;
+    color: #f5f5dc;
+}
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #3f4042;
+    background: #ffffff;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    font-size: 1rem;
+
+}
+a.button:hover{
+    color: #ffffff;
+    background-color: #364780;
+}
+.contenidoImagen p {
+    font-size: 2rem;
+    font-weight:bolder;
+    color: #f5f5dc;
+    justify-content: center;
+    align-items: center;
+    padding: 350px;
+    display: flex;
 }
 
-img {
-    transform: scale(1.5, 1.5);
-    -webkit-animation-name: zoomin;
-    -webkit-animation-duration: 35s;
-    animation-name: zoomin;
-    animation-duration: 35s;
+/*swiper button*/
+
+.nav-btn::before, 
+.nav-btn::after{
+    font-size: 30px;
+    color: #ffffff;
 }
-
-@-webkit-keyframes zoomin {
-    from {
-        transform: scale(1, 1);
-    }
-
-    to {
-        transform: scale(1.5, 1.5);
-    }
+.swiper-button-prev{
+    left: 50px;
 }
-
-@keyframes zoomin {
-    from {
-        transform: scale(1, 1);
-    }
-
-    to {
-        transform: scale(1.5, 1.5);
-    }
+.swiper-button-next{
+right: 50px;
 }
-
-@media screen and (max-width: 800px) {
-    .miBanner {
-        height: 500px;
+.swiper-pagination-bullet{
+    opacity: 1;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    visibility: hidden;
+}
+.swiper-pagination-bullet-active{
+    border: 1px solid #ffffff;
+    background-color: #041036;
+}
+@media screen and (max-widht:750px){
+    .nav-btn{
+visibility: hidden;
     }
-
-    .texto {
-        line-height: 30px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-animation-name: position;
-        -webkit-animation-duration: 2s;
-        animation-name: position;
-        animation-duration: 2s;
-    }
-
-    @-webkit-keyframes position {
-        from {
-            top: 30%;
-        }
-
-        to {
-            top: 50%;
-        }
-    }
-
-    @keyframes position {
-        from {
-            top: 30%;
-        }
-
-        to {
-            top: 50%;
-        }
-    }
-
-    .texto h1 {
-        font-size: 40px;
-    }
-
-    .texto p {
-        font-size: 15px;
+    .swiper-pagination-bullet{
+        visibility: visible;
     }
 }
-
-@media screen and (max-widht: 500px) {
-    .texto h1 {
-        font-size: 30px;
-    }
-
-    .Inicio {
-        margin-right: 20px;
-    }
-
-    .Quienes-somos {
-        margin-right: 20px;
-    }
-
-    .Servicios {
-        margin-right: 20px;
-    }
-
-    .Contactanos {
-        margin-right: 20px;
-    }
-
-    .inicio-sesion {
-        margin-right: 25px;
-    }
-}
-
-
-
-
 
 
 /*Footer*/
 .footer {
     width: 100%;
-    background-color: #979797;
+    background-color: #364780;
 }
 
 .footer .grupo-1 {
@@ -342,7 +226,6 @@ img {
 
 .footer .grupo-1 .box h2 {
     color: beige;
-    margin-bottom: 25px;
     font-size: 20px;
     margin-left: 20px;
 }
