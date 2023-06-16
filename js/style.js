@@ -51,15 +51,3 @@ dot[counter - 1].classList.add('active');
 function slidefun(n){
 }
 
-
-/*login*/
-function login() {
-    var user, password;
-    user = document.getElementById("user").value;
-    password = document.getElementById("password").value;
-    if (user == "prueba" && password == "12345") {
-        window.location = "perfilUsuario.html";
-    } else {
-        alert("Los datos ingresados son incorrectos, favor de verificar.");
-    }
-}
