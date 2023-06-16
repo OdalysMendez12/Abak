@@ -114,14 +114,14 @@ a:hover {
     color: #3456c7;
 }
 
-.banners {
+.slider {
     position: relative;
     width: 100%;
     background: #818181;
     ;
 }
 
-.miBanner {
+.myslide {
     height: 655px;
     overflow: hidden;
     display: none;
@@ -136,7 +136,7 @@ a:hover {
     padding: 15px;
     cursor: pointer;
     color: #ffffff;
-    transition: 2s;
+    transition: 0.5s;
     user-select: none;
 }
 
@@ -150,7 +150,6 @@ a:hover {
 }
 
 .dotsbox {
-    text-align: center;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -171,6 +170,33 @@ a:hover {
 .active,
 .dot:hover {
     border-color: #000000;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.8
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.8
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 .texto {
@@ -222,9 +248,9 @@ a:hover {
 img {
     transform: scale(1.5, 1.5);
     -webkit-animation-name: zoomin;
-    -webkit-animation-duration: 35s;
+    -webkit-animation-duration: 10s;
     animation-name: zoomin;
-    animation-duration: 35s;
+    animation-duration: 10s;
 }
 
 @-webkit-keyframes zoomin {
@@ -248,12 +274,13 @@ img {
 }
 
 @media screen and (max-width: 800px) {
-    .miBanner {
+    .myslide {
         height: 500px;
     }
 
     .texto {
         line-height: 30px;
+        letter-spacing: 2px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -292,9 +319,10 @@ img {
     }
 }
 
-@media screen and (max-widht: 500px) {
+@media screen and (max-witdh: 500px) {
     .texto h1 {
         font-size: 30px;
+        margin-bottom: 20px;
     }
 
     .Inicio {
@@ -302,19 +330,19 @@ img {
     }
 
     .Quienes-somos {
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .Servicios {
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .Contactanos {
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .inicio-sesion {
-        margin-right: 25px;
+        margin-right: 10px;
     }
 }
 
