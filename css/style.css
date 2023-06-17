@@ -95,7 +95,7 @@ header {
 }
 
 .vistasIniciales a:hover {
-    color: #000000;
+    color: #3456c7;
 }
 
 /*Banners*/
@@ -127,7 +127,9 @@ header {
     width: 100%;
     object-fit: cover;
 }
-
+.imagenes{
+    filter: brightness(30%);
+}
 .slide .contenidoImagen {
     position: absolute;
     top: 50%;
@@ -187,7 +189,7 @@ a.button:hover{
 right: 50px;
 }
 .swiper-pagination-bullet{
-    opacity: 1;
+    opacity: 2;
     height: 15px;
     width: 15px;
     background-color: #ffffff;
@@ -236,8 +238,8 @@ visibility: hidden;
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: white;
-    background-color: #364780;
+    color: #364780;
+    background-color: #ffffff;
     border-radius: 30px;
     text-align: center;
     transition: all 300ms ease;
