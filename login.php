@@ -14,5 +14,5 @@ if($fila ['fk_rol']==1){
 }if($fila ['fk_rol'] ==2){
     header('Location: vistas/usuario.php');
 }else {
-    header('Location: Isession.php');
+    header('Location: i_session.php');
 }

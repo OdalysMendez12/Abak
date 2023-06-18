@@ -192,13 +192,13 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user -> rol }}</td>-->
                             <td>
-                                <a href="{{ url('Editar-Usuario/'.$user->id) }}">
+                                <!--<a href="{{ url('Editar-Usuario/'.$user->id) }}">
                                     <button class="btn btn-success">
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarUsuario">
                                         </i>
                                     </button>
                                 </a>
-                                <button class="btn btn-danger EliminarUsuario" Uid="{{$user->id}}" Usuario="{{$user->name}}"><i class="fas fa-trash"></i></button>
+                                <button class="btn btn-danger EliminarUsuario" Uid="{{$user->id}}" Usuario="{{$user->name}}"><i class="fas fa-trash"></i></button>-->
                             </td>
                         </tr>
                         <!--@endforeach-->
@@ -271,7 +271,6 @@
         <!--datatables responsive-->
         <script src="../template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
         <script src="../template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- jQuery -->
         <script src="../template/plugins/jquery/jquery.min.js"></script>
         <!-- jQuery Utemplate/I 1.11.4 -->
