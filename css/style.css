@@ -10,58 +10,94 @@ html {
     font-size: 20px;
 }
 
-/*Banner*/
-#banner {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/banner.jpg);
-    color: #ffffff;
-    opacity: 0.7;
-}
-
-.container {
-    width: 90%;
-    height: 100%;
+/*Header*/
+.cont {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.back {
+    background-color: #364780;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    z-index: 1000;
+    padding-right: 15px;
 }
 
-.container .info h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.menu .navbar ul li {
+    position: relative;
+    float: left;
 }
 
-.container .info p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.container .info a {
-    text-decoration: none;
-    display: inline-block;
-    background-color: #ffffff;
-    border-radius: 20px;
+.menu .navbar ul li a {
     font-size: 1rem;
-    padding: 0.5rem 2rem;
-    margin-top: 2rem;
-    color: #000000;
-    font-weight: bold;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+    transition: all 0.5s ease;
+
 }
 
-@media only screen and (max-width: 800px) {
-    html {
-        font-size: 12px;
+.menu .navbar ul li a:hover {
+    color: #3456c7;
+    font-weight: bolder;
+}
+
+.menu-icono {
+    width: 35px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width:900px) {
+    .menu {
+        padding: 25px;
     }
+
+    .menu label {
+        display: initial;
+    }
+
+    .back {
+        padding: 50px 0;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #364780;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+        padding: 50px;
+    }
+}
+
+#menu {
+    display: none;
 }
 
 /*Header*/
@@ -72,7 +108,9 @@ header {
     top: 0;
     z-index: 6;
 }
-
+.headerVistas{
+    background-color: #3f4042;
+}
 #logo {
     display: inline-block;
     cursor: pointer;
@@ -98,6 +136,7 @@ header {
     color: #3456c7;
 }
 
+
 /*Banners*/
 .main {
     height: 100vh;
@@ -108,11 +147,13 @@ header {
 .slide {
     width: 100%;
     height: 100%;
-    position: relative;  
+    position: relative;
 }
-.slide{
+
+.slide {
     overflow: hidden;
 }
+
 .slide::before {
     content: "";
     position: absolute;
@@ -127,9 +168,11 @@ header {
     width: 100%;
     object-fit: cover;
 }
-.imagenes{
-    filter: brightness(30%);
+
+.imagenes {
+    filter: brightness(50%);
 }
+
 .slide .contenidoImagen {
     position: absolute;
     top: 50%;
@@ -139,16 +182,19 @@ header {
     width: 100%;
     z-index: 100;
 }
+
 .contenidoImagen h1 {
     font-size: 3rem;
     font-weight: bold;
     color: #ffffff;
 }
+
 .contenidoImagen h2 {
     font-size: 1.5rem;
     font-weight: 400;
     color: #f5f5dc;
 }
+
 a.button {
     display: inline-block;
     padding: 10px 20px;
@@ -161,13 +207,15 @@ a.button {
     font-size: 1rem;
 
 }
-a.button:hover{
+
+a.button:hover {
     color: #ffffff;
     background-color: #364780;
 }
+
 .contenidoImagen p {
     font-size: 2rem;
-    font-weight:bolder;
+    font-weight: bolder;
     color: #f5f5dc;
     justify-content: center;
     align-items: center;
@@ -177,33 +225,39 @@ a.button:hover{
 
 /*swiper button*/
 
-.nav-btn::before, 
-.nav-btn::after{
+.nav-btn::before,
+.nav-btn::after {
     font-size: 30px;
     color: #ffffff;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
     left: 50px;
 }
-.swiper-button-next{
-right: 50px;
+
+.swiper-button-next {
+    right: 50px;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     opacity: 2;
     height: 15px;
     width: 15px;
     background-color: #ffffff;
     visibility: hidden;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
     border: 1px solid #ffffff;
     background-color: #041036;
 }
-@media screen and (max-widht:750px){
-    .nav-btn{
-visibility: hidden;
+
+@media screen and (max-widht:750px) {
+    .nav-btn {
+        visibility: hidden;
     }
-    .swiper-pagination-bullet{
+
+    .swiper-pagination-bullet {
         visibility: visible;
     }
 }
@@ -212,7 +266,7 @@ visibility: hidden;
 /*Footer*/
 .footer {
     width: 100%;
-    background-color: #364780;
+    background-color: #000000;
 }
 
 .footer .grupo-1 {
@@ -238,7 +292,7 @@ visibility: hidden;
     width: 45px;
     height: 45px;
     line-height: 45px;
-    color: #364780;
+    color: #000000;
     background-color: #ffffff;
     border-radius: 30px;
     text-align: center;
@@ -250,10 +304,10 @@ visibility: hidden;
 }
 
 .footer .grupo-2 {
-    background-color: #364780;
+    background-color: #000000;
     padding: 15px 10px;
     text-align: center;
-    color: white;
+    color: #ffffff;
 }
 
 .footer .grupo-2 small {

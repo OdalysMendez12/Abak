@@ -15,14 +15,26 @@
     <title>Abak Soluciones</title>
 </head>
 <body>
-    <!-- Inicio Header -->
+    <!--Inicio Header-->
     <header>
-        <div id="logo"><img src="img/logo.png" style="width: 100%; height: 100px;"></div>
-        <span class="inicio-sesion"><a  class="act" href="i_sesion.php"><i class="fas fa-user"></i></a></span>
-        <span class="Contactanos"><a  class="act" href="/contactanos.html">Contáctanos</a></span>
-        <span class="Servicios"><a  class="act" href="/servicios.html">Servicios</a></span>
-        <span class="Quienes-somos"><a  class="act" href="/quienessomos.html">Quiénes Somos</a></span>
-        <span class="Inicio"> <a class="act" href="/index.html">Inicio</a></span>
+        <div class="back">
+            <div><img src="img/logo.png" style="height: 70px;" href="./index.html"></div>
+            <div class="cont menu">
+                <input type="checkbox" id="menu"/>
+                <label for="menu">
+                    <img src="/img/menu.png" class="menu-icono">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./quienessomos.html">Quiénes Somos</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contactanos.html">Contáctanos</a></li>
+                        <li><a href="./i_sesion.php" class="fas fa-user"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
     <!-- Fin Header -->
     <section class="contenido wrapper">
