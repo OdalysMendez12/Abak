@@ -17,7 +17,8 @@ html {
 }
 
 .back {
-    background-color: #364780;
+    background-color: #ffffff;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,0.6)!important;
 }
 
 .navbar ul li {
@@ -43,7 +44,7 @@ html {
 .menu .navbar ul li a {
     font-size: 1rem;
     padding: 20px;
-    color: #ffffff;
+    color: #3456c7;
     display: block;
     text-decoration: none;
     transition: all 0.5s ease;
@@ -51,8 +52,9 @@ html {
 }
 
 .menu .navbar ul li a:hover {
-    color: #3456c7;
+    color: #000000;
     font-weight: bolder;
+    border-radius: 20px;
 }
 
 .menu-icono {
@@ -72,11 +74,6 @@ html {
     .menu label {
         display: initial;
     }
-
-    .back {
-        padding: 50px 0;
-    }
-
     .menu .navbar {
         position: absolute;
         top: 100%;
