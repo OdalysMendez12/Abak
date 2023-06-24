@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <!-- Swiper JS -->
@@ -41,51 +42,36 @@
 
     <!--Fin Header-->
     <!--Inicio Banners-->
-    <section class="main swiper mySwiper">
-        <div class="wrapper swiper-wrapper">
-            <div class="slide swiper-slide">
-                <img src="./img/banner.jpg" alt="" class="imagenes"/>
-                <div class="contenidoImagen">
-                    <h1>A´BAK Soluciones y Asociados</h1>
-                    <h2>TECNOLOGÍAS DE INFORMÁTICA A TU MEDIDA <br> </2>
-                        <a href="./servicios.html" class="button">Saber Más</a>
+    <div class="container-slider">
+        <div class="slider" id="slider">
+            <div class="slider__section">
+                <img src="./assets/img/Hombre.jpeg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__titulo">LO MEJOR PARA HOMBRES</h2>
+                    <p class="slider_texto">Crea tu estilo</p>
+                    <a href="index.php" class="slider__link">Ir a ver</a>
                 </div>
             </div>
-            <div class="slide swiper-slide">
-                <img src="./img/banner2.jpg" alt="" class="imagenes" />
-                <div class="contenidoImagen">
-                    <p>Contamos con un portafolio de atención en el ramo de seguridad informática, redes, desarrollo,
-                        venta de equipo de cómputo, etc. <br> Todo lo necesario para la operación de tu negocio.</p>
+            <div class="slider__section">
+                <img src="./assets/img/S_Mujer_Nike.jpg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__titulo">LO MEJOR PARA MUJERES</h2>
+                    <p class="slider_texto">Apasionate con nuestros productos</p>
+                    <a href="index.php" class="slider__link">Ir a ver</a>
                 </div>
             </div>
-            <div class="slide swiper-slide">
-                <img src="./img/banner3.jpg" alt="" class="imagenes" />
-                <div class="contenidoImagen">
-                    <p>Con la integración de nuestros aliados y distribuidores de las marcas más reconocidas a nivel
-                        internacional, estamos preparados para superar cualquier expectativa en el ramo de Tecnologías
-                        de información.</p>
+            <div class="slider__section">
+                <img src="./assets/img/Niño.jpeg" alt="" class="slider__img">
+                <div class="slider__content">
+                    <h2 class="slider__titulo">LO MEJOR PARA NIÑOS</h2>
+                    <p class="slider_texto">Comienza la moda</p>
+                    <a href="index.php" class="slider__link">Ir a ver</a>
                 </div>
             </div>
         </div>
-        <div class="swiper-button-next nav-btn"></div>
-        <div class="swiper-button-prev nav-btn"></div>
-        <div class="swiper-pagination"></div>
-    </section>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
+        <div class="slider_btn slider__btn--right" id="btn-rigth">&#60;</div>
+        <div class="slider_btn slider__btn--left" id="btn-left">&#62;</div>
+    </div>
     <!--FinBanners-->
 
     <!--Inicio Footer-->
@@ -107,6 +93,7 @@
         </div>
     </footer>
     <!--Fin Footer-->
+    <script src="js/slider.js"></script>
 </body>
 
 </html>
