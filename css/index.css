@@ -1,6 +1,4 @@
-
-
-/*SLIDEEEEEEEER*/
+/*--------------------------------- SLIDER ---------------------------------*/
 .container-slider{
     margin: 0;
     position: relative;
@@ -176,7 +174,7 @@ background-color: #364780;
             grid-gap: 15px;
         }
         .producto__img{
-            height: 150px;
+            height: px;
         }
         .container__testimonios{
             font-size: 1.3em;
@@ -195,17 +193,6 @@ background-color: #364780;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 20px;
-        }
-        /*FOOTER*/
-        .main__footer{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 5px;
-            height: 100%;
-        }
-        .copy{
-            grid-column-start: span 4;
-            text-align: center;
         }
     }
     @media screen and (min-width: 1280px) {
