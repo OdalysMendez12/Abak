@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/quienessomos.css">
-    <link rel="stylesheet" href="./css/style.css">
 
     <script src="<style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@300&display=swap');
@@ -31,12 +30,12 @@
                 <a href="./index.html">Inicio</a>
                 <a href="./quienessomos.html">Quiénes Somos</a>
                 <a href="./servicios.html">Servicios</a>
-                <a href="./contactanos.html">Contáctanos</a>
-                <a href="./i_sesion.php" class="fa-solid fa-headsetfas fa-user"></a>
+                <a class="efecto" href="./contactanos.html">Contáctanos</a>
+                <a href="./i_sesion.php" class="fa-solid fa-headset"></a>
             </nav>
         </div>
     </div>
-    <!-- Fin Header --> 
+    <!-- Fin Header -->
     <!--Inicio Contenido-->
     <div class="contenedor-qs">
         <div class="descripcion-qs">
@@ -48,6 +47,56 @@
         </div>
         <img class="imagen-qs" src="./img/descripcion-qs.jpg">
     </div>
+
+
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <div class="slide-content">
+                            <h2>MISIÓN</h2>
+                            <p>
+                                Brindar a nuestros clientes asesoría y soluciones integrales en el área de
+                                Tecnologías de la Información.
+                            </p>                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="slide-content">
+                            <h2>VISIÓN</h2>
+                            <p>
+                                Consolidarnos como un grupo de profesionistas y asesores que otorguen a nuestros
+                                clientes soluciones integrales en el área de Tecnologías de Información y
+                                mantenimiento en general, a través de las cuales les permita incrementar su
+                                productividad y competitividad.
+                            </p>                       
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="slide-content">
+                            <h2>VALORES</h2>
+                            <p>Transparencia <br> Calidad <br> Responsabilidad <br> Seguridad <br> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+    </div>
+    <!--
     <div class="cuadro-qs">
         <div class="info-qs">
             <div class="card-container">
@@ -90,6 +139,7 @@
             </div>
         </div>
     </div>
+-->
     <!--Fin Contenido-->
     <!--Inicio Footer-->
     <footer class="footer">
@@ -127,7 +177,7 @@
             </small>
         </div>
     </footer>
-        <!--Fin Footer-->
+    <!--Fin Footer-->
 </body>
 
 </html>
