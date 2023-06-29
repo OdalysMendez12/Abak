@@ -169,10 +169,10 @@ img {
 /*slider, mision, vision, valores*/
 .mvv {
     width: 100%;
-    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
+    margin-bottom: 30px;
 }
 
 .mvv figure {
