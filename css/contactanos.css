@@ -111,7 +111,18 @@ html {
         line-height: 50px;
     }
 }
+/*--------------------------------- CONTENIDO CONTACTANOS ---------------------------------*/
+.contenedor-contacto{
+    background: #ffffff;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 
+}
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
     width: 100%;
