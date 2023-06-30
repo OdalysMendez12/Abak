@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contactanos.css">
     <script
         src="<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');</style>"></script>
     <script
@@ -14,65 +15,73 @@
     <script src="./js/style.js"></script>
     <title>Abak Soluciones</title>
 </head>
+
 <body>
     <!--Inicio Header-->
-    <header>
-        <div class="back">
-            <div><a href="./index.html"><img src="img/logo.png" style="height: 70px; width: 120px;"></a></div>
-            <div class="cont menu">
-                <input type="checkbox" id="menu" />
-                <label for="menu">
-                    <img src="/img/menu.png" class="menu-icono">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./quienessomos.html">Quiénes Somos</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li><a href="./contactanos.html">Contáctanos</a></li>
-                        <li><a href="./i_sesion.php" class="fas fa-user"></a></li>
-                    </ul>
-                </nav>
+    <!--Inicio Header-->
+    <div class="header-vistas">
+        <div class="wrapper-vistas">
+            <div class="logo-vistas"><a href="./index.html"><img src="img/logo.png"
+                        style="height: 70px; width: 120px;"></a></div>
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="./quienessomos.html">Quiénes Somos</a>
+                <a href="./servicios.html">Servicios</a>
+                <a class="efecto" href="./contactanos.html">Contáctanos</a>
+                <a href="./i_sesion.php" class="fa-solid fa-headset"></a>
+            </nav>
+        </div>
+    </div>
+    <!-- Fin Header -->
+    <!-- Inicio Contenido -->
+    <div class="contenedor-contacto">
+    <section>
+        <div class="formulario"><!--contactForm-->
+            <div class="texto"> 
+                <h2>ESCRÍBENOS</h2>
+                <p>Te invitamos a ponerte en contacto con nosotros.</p>
             </div>
         </div>
-    </header>
-    <!-- Fin Header -->
-
-    <div id="sectionA">
-        <div class="container_nosotros">
-			<div class="content-section">
-				<div class="content">
-					<h3>Abak Soluciones</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet exercitationem temporibus illo iste tenetur, aliquam aperiam reprehenderit voluptatem, maxime quia enim accusantium necessitatibus illum incidunt quasi vero adipisci, expedita accusamus.</p>
-                    <div class="button">
-						<a>¡Contáctanos!</a>
-					</div>
-				</div>
-			</div>
-			<div class="image-section">
-				<img src="/img/imagen-valores.jpg">
-			</div>
-		</div>
-    </div>
+    </section>
+</div>
+    <!-- Fin Contenido -->
     <!--Inicio Footer-->
     <footer class="footer">
         <div class="grupo-1">
             <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <div class="masInfo">
+                    <p><a class="fa-solid fa-phone" href="#"></a> 998 362 0116</p>
+                    <p><a class="fa-brands fa-whatsapp" href="#"></a> 998 220 6852</p>
+                    <p><a class="fa-solid fa-envelope" href="#"></a> ventas@abaksoluciones.com</p>
+                </div>
+            </div>
+            <div class="box">
                 <h2>SÍGUENOS</h2>
                 <div class="redesSociales">
-                    <a href="a" class="fa fa-facebook"></a>
-                    <a href="a" class="fa fa-instagram"></a>
-                    <a href="a" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>NUESTROS SERVICIOS</h2>
+                <div class="masServ">
+                    <p><a href="servicios.html">Servicio y consultoría de TI</a></p>
+                    <p><a href="servicios.html">Diseño y Desarrollo</a></p>
+                    <p><a href="servicios.html">Seguridad Informática</a></p>
+                    <p><a href="servicios.html">Servidores Cloud</a></p>
+                    <p><a href="servicios.html">Servicio de Mantenimiento en general</a></p>
                 </div>
             </div>
         </div>
         <div class="grupo-2">
-            <p>
+            <small>
                 © 2023 <b>Abak Soluciones</b> - Todos los derechos reservados.
-            </p>
+            </small>
         </div>
     </footer>
-    <!-- Fin Footer-->
+    <!--Fin Footer-->
 </body>
 
 </html>

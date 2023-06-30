@@ -6,18 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <!-- Swiper JS -->
     <script src="./js/swiper-bundle.min.js"></script>
-    <script
-        src="<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');</style>"></script>
-    <script
-        src="<style>@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');</style>"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://kit.fontawesome.com/4ed8e6bc93.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway&display=swap');
+    </style>
     <script src="./js/style.js"></script>
     <title>Abak Soluciones</title>
 </head>
@@ -25,47 +22,38 @@
 <body>
     <!--Inicio Header-->
     <header>
-        <!--<div id=" logo"><a><img src="./img/logo.png" style="width: 120px; height: 80px;"></a>
-        </div>-->
-        <span class="vistasIniciales"><a href="./i_sesion.php" class="fas fa-user"></a></span>
-        <span class="vistasIniciales"><a href="./contactanos.html">Contáctanos</a></span>
+        <span class="vistasIniciales"><a href="./i_sesion.php" class="fa-solid fa-headset"></a></span>
+        <span class="vistasIniciales vista"><a class="link" href="./contactanos.html">Contáctanos</a></span>
         <span class="vistasIniciales"><a href="./servicios.html">Servicios</a></span>
         <span class="vistasIniciales"><a href="./quienessomos.html">Quiénes Somos</a></span>
         <span class="vistasIniciales"><a href="./index.html">Inicio</a></span>
-        <!--
-        <div class="main-header__container">
-            <span class="main-header-texto">Necesitas ayuda?</span>
-            <p class="main-header-texto">Tel. 33 3904 3042 <i class="fa-solid fa-phone-flip"></i></p>
-        </div>
-        -->
     </header>
-
     <!--Fin Header-->
     <!--Inicio Banners-->
     <div class="container-slider">
         <div class="slider" id="slider">
             <div class="slider__section">
-                <img src="./assets/img/Hombre.jpeg" alt="" class="slider__img">
+                <img src="./img/banner.jpg" alt="" class="slider__img">
                 <div class="slider__content">
-                    <h2 class="slider__titulo">LO MEJOR PARA HOMBRES</h2>
-                    <p class="slider_texto">Crea tu estilo</p>
-                    <a href="index.php" class="slider__link">Ir a ver</a>
+                    <h2 class="slider__titulo">A´BAK Soluciones y Asociados</h2>
+                    <h3 class="slider__subtitulo">TECNOLOGÍAS DE INFORMÁTICA A TU MEDIDA</h3>
+                    <a href="./quienessomos.html" class="slider__link">Saber Más</a>
                 </div>
             </div>
             <div class="slider__section">
-                <img src="./assets/img/S_Mujer_Nike.jpg" alt="" class="slider__img">
+                <img src="./img/banner2.jpg" alt="" class="slider__img">
                 <div class="slider__content">
-                    <h2 class="slider__titulo">LO MEJOR PARA MUJERES</h2>
-                    <p class="slider_texto">Apasionate con nuestros productos</p>
-                    <a href="index.php" class="slider__link">Ir a ver</a>
+                    <p class="slider_texto">Contamos con un portafolio de atención en el ramo de seguridad informática,
+                        redes, desarrollo, venta de equipo de cómputo, entre otros. <br> <br> Todo lo necesario para la
+                        operación de tu negocio.</p>
                 </div>
             </div>
             <div class="slider__section">
-                <img src="./assets/img/Niño.jpeg" alt="" class="slider__img">
+                <img src="./img/banner3.jpg" alt="" class="slider__img">
                 <div class="slider__content">
-                    <h2 class="slider__titulo">LO MEJOR PARA NIÑOS</h2>
-                    <p class="slider_texto">Comienza la moda</p>
-                    <a href="index.php" class="slider__link">Ir a ver</a>
+                    <p class="slider_texto">Con la integración de nuestros aliados y distribuidores de las marcas más
+                        reconocidas a nivel internacional, estamos preparados para superar cualquier expectativa en el
+                        ramo de Tecnologías de la Información.</p>
                 </div>
             </div>
         </div>
@@ -78,18 +66,36 @@
     <footer class="footer">
         <div class="grupo-1">
             <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <div class="masInfo">
+                    <p><a class="fa-solid fa-phone" href="#"></a> 998 362 0116</p>
+                    <p><a class="fa-brands fa-whatsapp" href="#"></a> 998 220 6852</p>
+                    <p><a class="fa-solid fa-envelope" href="#"></a> ventas@abaksoluciones.com</p>
+                </div>
+            </div>
+            <div class="box">
                 <h2>SÍGUENOS</h2>
                 <div class="redesSociales">
-                    <a href="a" class="fa fa-facebook"></a>
-                    <a href="a" class="fa fa-instagram"></a>
-                    <a href="a" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>NUESTROS SERVICIOS</h2>
+                <div class="masServ">
+                    <p><a href="servicios.html">Servicio y consultoría de TI</a></p>
+                    <p><a href="servicios.html">Diseño y Desarrollo</a></p>
+                    <p><a href="servicios.html">Seguridad Informática</a></p>
+                    <p><a href="servicios.html">Servidores Cloud</a></p>
+                    <p><a href="servicios.html">Servicio de Mantenimiento en general</a></p>
                 </div>
             </div>
         </div>
         <div class="grupo-2">
-            <p>
+            <small>
                 © 2023 <b>Abak Soluciones</b> - Todos los derechos reservados.
-            </p>
+            </small>
         </div>
     </footer>
     <!--Fin Footer-->

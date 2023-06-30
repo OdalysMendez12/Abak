@@ -6,66 +6,6 @@
 
 html {
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-font-family: 'Raleway', sans-serif;
-
-}
-
-/*--------------------------------- HEADER INICIO ---------------------------------*/
-header {
-    height: 65px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 6;
-}
-
-.headerVistas {
-    background-color: #3f4042;
-}
-
-#logo {
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-left: 15px;
-}
-
-.vistasIniciales {
-    float: right;
-    line-height: 60px;
-    margin-right: 20px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.vistasIniciales a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-
-}
-
-.vistasIniciales .link {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-    background-color: #3456c7;
-    border-radius: 30px;
-    padding: 10px;
-    transition: all 0.2s ease;
-}
-
-.vistasIniciales .link:hover {
-    color: #3456c7;
-    background-color: #ffffff;
-}
-
-.vistasIniciales a:hover {
-    color: #3456c7;
 }
 
 /*--------------------------------- HEADER VISTAS ---------------------------------*/
@@ -171,7 +111,18 @@ header {
         line-height: 50px;
     }
 }
+/*--------------------------------- CONTENIDO CONTACTANOS ---------------------------------*/
+.contenedor-contacto{
+    background: #ffffff;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 
+}
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
     width: 100%;

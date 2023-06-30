@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/quienessomos.css">
+
     <script src="<style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@300&display=swap');
       </style>"></script>
@@ -21,26 +22,19 @@
 
 <body>
     <!--Inicio Header-->
-    <header>
-        <div class="back">
-            <div><a href="./index.html"><img src="img/logo.png" style="height: 70px; width: 120px;"></a></div>
-            <div class="cont menu">
-                <input type="checkbox" id="menu" />
-                <label for="menu">
-                    <img src="/img/menu.png" class="menu-icono">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./quienessomos.html">Quiénes Somos</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li><a href="./contactanos.html">Contáctanos</a></li>
-                        <li><a href="./i_sesion.php" class="fas fa-user"></a></li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="header-vistas">
+        <div class="wrapper-vistas">
+            <div class="logo-vistas"><a href="./index.html"><img src="img/logo.png"
+                        style="height: 70px; width: 120px;"></a></div>
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="./quienessomos.html">Quiénes Somos</a>
+                <a href="./servicios.html">Servicios</a>
+                <a class="efecto" href="./contactanos.html">Contáctanos</a>
+                <a href="./i_sesion.php" class="fa-solid fa-headset"></a>
+            </nav>
         </div>
-    </header>
+    </div>
     <!-- Fin Header -->
     <!--Inicio Contenido-->
     <div class="contenedor-qs">
@@ -53,68 +47,72 @@
         </div>
         <img class="imagen-qs" src="./img/descripcion-qs.jpg">
     </div>
-    <div class="cuadro-qs">
-        <div class="info-qs">
-            <div class="card-container">
-                <div class="card">
-                    <div class="front-content">
-                        <p>MISIÓN</p>
-                    </div>
-                    <div class="content">
-                        <p>
-                            Brindar a nuestros clientes asesoría y soluciones integrales en el área de
-                            Tecnologías de la Información.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="front-content">
-                        <p>VISIÓN</p>
-                    </div>
-                    <div class="content">
-                        <p>
-                            Consolidarnos como un grupo de profesionistas y asesores que otorguen a nuestros
-                            clientes soluciones integrales en el área de Tecnologías de Información y
-                            mantenimiento en general, a través de las cuales les permita incrementar su
-                            productividad y competitividad.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div class="front-content">
-                        <p>VALORES</p>
-                    </div>
-                    <div class="content">
-                        <p>Transparencia <br> Calidad <br> Responsabilidad <br> Seguridad <br> </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="mvv">
+        <figure>
+            <img src="./img/imagen-mision.jpg">
+            <div class="capa">
+                <h2>MISIÓN</h2>
+                <p>
+                    Brindar a nuestros clientes asesoría y soluciones integrales en el área de
+                    Tecnologías de la Información.
+                </p>
+        </figure>
+        <figure>
+            <img src="./img/imagen-vision.jpg">
+            <div class="capa">
+                <h2>VISIÓN</h2>
+                <p>
+                    Consolidarnos como un grupo de profesionistas y asesores que otorguen a nuestros
+                    clientes soluciones integrales en el área de Tecnologías de Información y
+                    mantenimiento en general, a través de las cuales les permita incrementar su
+                    productividad y competitividad.
+                </p>
+        </figure>
+        <figure>
+            <img src="./img/imagen-valores.jpg">
+            <div class="capa">
+                <h2>VALORES</h2>
+                <p>Transparencia <br> Calidad <br> Responsabilidad <br> Seguridad <br> </p>
+        </figure>
     </div>
     <!--Fin Contenido-->
     <!--Inicio Footer-->
     <footer class="footer">
         <div class="grupo-1">
             <div class="box">
+                <h2>MÁS INFORMACIÓN</h2>
+                <div class="masInfo">
+                    <p><a class="fa-solid fa-phone" href="#"></a> 998 362 0116</p>
+                    <p><a class="fa-brands fa-whatsapp" href="#"></a> 998 220 6852</p>
+                    <p><a class="fa-solid fa-envelope" href="#"></a> ventas@abaksoluciones.com</p>
+                </div>
+            </div>
+            <div class="box">
                 <h2>SÍGUENOS</h2>
                 <div class="redesSociales">
-                    <a href="a" class="fa fa-facebook"></a>
-                    <a href="a" class="fa fa-instagram"></a>
-                    <a href="a" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h2>NUESTROS SERVICIOS</h2>
+                <div class="masServ">
+                    <p><a href="servicios.html">Servicio y consultoría de TI</a></p>
+                    <p><a href="servicios.html">Diseño y Desarrollo</a></p>
+                    <p><a href="servicios.html">Seguridad Informática</a></p>
+                    <p><a href="servicios.html">Servidores Cloud</a></p>
+                    <p><a href="servicios.html">Servicio de Mantenimiento en general</a></p>
                 </div>
             </div>
         </div>
         <div class="grupo-2">
-            <p>
+            <small>
                 © 2023 <b>Abak Soluciones</b> - Todos los derechos reservados.
-            </p>
+            </small>
         </div>
     </footer>
-    <!-- Fin Footer-->
+    <!--Fin Footer-->
 </body>
 
 </html>
