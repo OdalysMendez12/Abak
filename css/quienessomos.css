@@ -113,13 +113,24 @@ html {
 }
 
 /*--------------------------------- CONTENIDO  QUIÉNES SOMOS ---------------------------------*/
+.tittle {
+    color: #100d6a;
+    margin: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    border-bottom: solid 3px;
+    line-height: 42px;
+    padding: 0px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
 .General {
     border-radius: 7px;
     z-index: 2;
     height: auto;
-    font-family: 'Times New Roman', Times, serif;
     display: grid;
-
 }
 
 .letras_titulo {
@@ -314,15 +325,18 @@ margin: 10px;
     text-decoration: none;
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 18px;
-    transition: all 0.3s ease;
+    font-size: 12px;
+    letter-spacing: 4px;
 
+    transition: all 0.3s ease;
 }
 
 .footer .grupo-1 .box .masServ a:hover {
     color: #3456c7;
     font-weight: bold;
+    text-decoration:underline;
 }
+
 
 .footer .grupo-2 {
     color: #ffffff;

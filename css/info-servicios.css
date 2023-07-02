@@ -200,15 +200,17 @@ html {
     text-decoration: none;
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 12px;
+    letter-spacing: 4px;
     transition: all 0.3s ease;
-
 }
 
 .footer .grupo-1 .box .masServ a:hover {
     color: #3456c7;
     font-weight: bold;
+    text-decoration:underline;
 }
+
 
 .footer .grupo-2 {
     color: #ffffff;
