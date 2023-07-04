@@ -7,7 +7,7 @@
 html {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
-font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 
 }
 
@@ -207,7 +207,7 @@ header {
 .footer .grupo-1 .box .masInfo a {
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 0.8rem;
     text-decoration: none;
     transition: all 0.5s ease;
 
@@ -259,7 +259,7 @@ header {
     text-decoration: none;
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: 0.8rem;
     letter-spacing: 4px;
     transition: all 0.3s ease;
 }
@@ -267,7 +267,7 @@ header {
 .footer .grupo-1 .box .masServ a:hover {
     color: #3456c7;
     font-weight: bold;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 
