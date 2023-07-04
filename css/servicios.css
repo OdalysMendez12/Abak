@@ -211,7 +211,6 @@ section .card .imagen img {
     margin-bottom: 10px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
     text-align: center;
 }
 
@@ -276,7 +275,7 @@ section .card .imagen img {
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     opacity: 1;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/
