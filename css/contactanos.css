@@ -128,9 +128,12 @@ section .info-contacto {
     padding: 35px;
     width: 90%;
     height: 90%;
-    background: #aec1ff;
+    background-image: url(../img/fondo-contactanos.jpg);
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    -webkit-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
+    -moz-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
+    box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
 }
 
 section .info-contacto .formulario {
@@ -149,33 +152,35 @@ section .info-contacto .formulario form {
 section .info-contacto .formulario .texto h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 900;
     color: #100d6a;
     text-align: center;
+    padding: 0;
+    letter-spacing: 2px;
 }
 
 section .info-contacto .formulario .texto p {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.5;
-    color: #000000;
     text-align: center;
+    color: #100d6a;
+    font-weight: 600;
 }
 
 section .info-contacto .formulario form .info-usuario {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    color: #100d6a;
+    color: #3456c7;
 }
 
 section .info-contacto .formulario form .info-usuario label {
     font-family: 'Poppins', sans-serif;
-    ;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 0.8rem;
-    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 section .info-contacto .formulario form .info-usuario input[type="text"],
@@ -184,7 +189,7 @@ section .info-contacto .formulario form .info-usuario textarea {
     border: none;
     padding: 10px;
     border-radius: 20px;
-    color: #000000;
+    color: #100d6a;
     font-family: 'Raleway', sans-serif;
     resize: none;
 }
@@ -192,7 +197,7 @@ section .info-contacto .formulario form .info-usuario textarea {
 section .info-contacto .formulario form .info-usuario input[type="text"]:focus,
 section .info-contacto .formulario form .info-usuario input[type="email"]:focus,
 section .info-contacto .formulario form .info-usuario textarea:focus {
-    outline: 3px solid #000000;
+    outline: 3px solid #100d6a;
 }
 
 section .info-contacto .formulario form input[type="submit"] {
@@ -201,7 +206,7 @@ section .info-contacto .formulario form input[type="submit"] {
     display: inline-block;
     text-align: center;
     width: 120px;
-    padding: 15px;
+    padding: 12px;
     border-radius: 25px;
     color: #ffffff;
     letter-spacing: 2px;
@@ -211,6 +216,7 @@ section .info-contacto .formulario form input[type="submit"] {
     font-size: 0.8rem;
     box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.8);
     font-weight: bolder;
+    margin-bottom: 25px;
 }
 
 section .info-contacto .formulario form span {
@@ -228,8 +234,7 @@ section .info-contacto .formulario form input[type="submit"]:hover {
 section .info-contacto .contenedor-contacto {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items: self-end;
 }
 
 section .info-contacto .contenedor-contacto .imagen-contacto {
@@ -251,6 +256,8 @@ section .info-contacto .contenedor-contacto .textBox {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #100d6a;
+    font-weight: 600;
 }
 
 section .info-contacto .contenedor-contacto .textBox .contacto {
@@ -265,14 +272,14 @@ section .info-contacto .contenedor-contacto .textBox .contacto {
 section .info-contacto .contenedor-contacto .textBox .contacto a {
     padding: 10px;
     text-decoration: none;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #100d6a;
     transition: all 0.5s ease;
 
 }
 
 section .info-contacto .contenedor-contacto .textBox .contacto a:hover {
-    background-color: #3456c7;
+    background-color: #000000;
     color: #ffffff;
     border-radius: 35px;
     padding: 10px;
@@ -332,7 +339,7 @@ margin-bottom: 30px;
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.5rem; 
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;

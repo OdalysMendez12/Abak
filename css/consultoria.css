@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 20px;
-}
-
 /*--------------------------------- HEADER ---------------------------------*/
 .header-vistas {
     width: 100%;
@@ -112,7 +108,53 @@ html {
     }
 }
 
+/*--------------------------------- CONTENIDO ---------------------------------*/
+.tittle h1 {
+    color: #000000;
+    margin: 20px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    border-bottom: solid 3px;
+    line-height: 42px;
+    padding: 0px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
 
+.contenedor-uno {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.contenedor-uno p {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+}
+
+.contenedor-uno .texto-uno {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.contenedor-uno .texto-dos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-uno .texto-tres {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.contenedor-uno .cards{
+    margin-bottom: 20px;
+}
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
     width: 100%;
@@ -125,7 +167,7 @@ html {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px; 
+    grid-gap: 80px;
     padding: 20px 0px;
     color: #ffffff;
 }
@@ -133,7 +175,7 @@ html {
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
