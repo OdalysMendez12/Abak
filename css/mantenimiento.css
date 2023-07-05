@@ -108,7 +108,20 @@
     }
 }
 /*--------------------------------- CONTENIDO ---------------------------------*/
-
+.tittle h1 {
+    color: #000000;
+    margin: 20px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    border-bottom: solid 3px;
+    line-height: 42px;
+    padding: 0px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
 
 
 /*--------------------------------- FOOTER ---------------------------------*/

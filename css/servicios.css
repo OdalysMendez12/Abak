@@ -164,7 +164,7 @@ section {
     position: absolute;
     height: 40%;
     width: 100%;
-    background: #3456c7;
+    background: #100d6a;
     border-radius: 20px 20px 0 0;
 }
 
@@ -182,7 +182,7 @@ section .card .imagen {
     width: 140px;
     border-radius: 20%;
     padding: 3px;
-    background: #100d6a;
+    background: #3456c7;
     margin-top: 30px;
 }
 
@@ -231,7 +231,7 @@ section .card .imagen img {
 }
 
 .card .button button {
-    background: #3456c7;
+    background: #100d6a;
     outline: none;
     border: none;
     color: #fff;
