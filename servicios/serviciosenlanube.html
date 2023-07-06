@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <!-- Swiper JS -->
     <script src="./js/swiper-bundle.min.js"></script>
-    <script
-        src="<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');</style>"></script>
-    <script
-        src="<style>@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');</style>"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300&display=swap');
+    </style>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://kit.fontawesome.com/4ed8e6bc93.js" crossorigin="anonymous"></script>
-    <script src="./js/style.js"></script>
     <title>Abak Soluciones</title>
 </head>
 
@@ -38,10 +36,89 @@
     </div>
     <!-- Fin Header -->
     <!--Inicio Contenido-->
-    <div class="tittle">
-        <h1>Servicios en la nube</h1>
+    <div class="contenedor-sn">
+        <div class="tittle">
+            <h1>Servicios en la nube</h1>
+        </div>
+        <div class="contenido-sn">
+            <p>
+                Diseñamos e implementamos soluciones de conectividad empresarial a la medida, con gran escalabilidad y
+                reducción de costos significativamente. Traemos la experiencia y los frameworks necesarios para ayudarte
+                en cualquier estrategia para el uso de la nube, la transformación de las aplicaciones, el plan de
+                recuperación ante desastres y el soporte continuo hacen más flexible y escalable el uso de esta
+                tecnología.
+            </p>
+            <div class="texto">
+                <img class="imagen" src="../img/serviciosenlanube.jpg">
+                <p class="texto-uno">
+                    Ofrecemos:
+                <ul>
+                    <li> Acceso único simplificado</li>
+                    <li>Alta disponibilidad</li>
+                    <li>Seguridad</li>
+                    <li>Almacenamiento</li>
+                    <li>Infraestructura protegida</li>
+                    <li>Data centers</li>
+                    <li>Ancho de banda bajo demanda</li>
+                    <li>Interconexiones entre servidores Cloud</li>
+                    <li>Cloud virtual, desktop y más...</li>
+                </ul>
+                </p>
+            </div>
+            <div class="subtitulo">
+                <h2>Beneficios</h2>
+            </div>
+            <div class="texto-dos">
+                <div class="card">
+                    <div class="first-content">
+                        <span>Facilidad de aprovisionamiento y mantenimiento</span>
+                    </div>
+                    <div class="second-content">
+                        <span>Reducción de tiempo en la preparación y la administración de “N” servidores.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="first-content">
+                        <span>Rentabilidad</span>
+                    </div>
+                    <div class="second-content">
+                        <span>Reducción de costos en Hardware y Software, adicionalmente de pagar solo por los recursos demandados.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="first-content">
+                        <span>Escalabilidad</span>
+                    </div>
+                    <div class="second-content">
+                        <span>Facilidad de elasticidad para escalar o desescalar de manera rápida y sencilla.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="first-content">
+                        <span>Integración</span>
+                    </div>
+                    <div class="second-content">
+                        <span>Facilidad de integración a otros soluciones en la nube, por ejemplo: almacenamiento, respaldos, etc.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carrousel">
+        <h2>Nuestros asociados</h2>
+        <div class="marcas">
+            <img class="asociados" src="../img/Microsoft-Azure.png">
+            <img class="asociados" src="../img/Google-Cloud.png">
+            <img class="asociados" src="../img/Amazon-Web-Services.png">
+        </div>
+        <ul class="boton">
+            <li class="punto activo"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+        </ul class="boton">
     </div>
     <!--Fin Contenido-->
+
     <!--Inicio Footer-->
     <footer class="footer">
         <div class="grupo-1">
@@ -64,13 +141,15 @@
             <div class="box">
                 <h4>Nuestros servicios</h4>
                 <div class="masServ">
-                    <p><a href="#">Mesa de ayuda (Help Desk)</a></p>
-                    <p><a href="#">Soporte técnico</a></p>
-                    <p><a href="./serviciosenlanube.html">Servicios en la nube</a></p>
-                    <p><a href="./consultoria.html">Consultoría informática</a></p>
-                    <p><a href="./diseñoydesarrollo.html">Diseño y desarrollo</a></p>
-                    <p><a href="./seguridadinformatica.html">Seguridad informática</a></p>
-                    <p><a href="./mantenimiento.html">Mantenimiento en general</a></p>
+                    <ul>
+                        <li><a href="#">Mesa de ayuda (Help Desk)</a></li>
+                        <li><a href="#">Soporte técnico</a></li>
+                        <li><a href="./servicios/serviciosenlanube.html">Servicios en la nube</a></li>
+                        <li><a href="./servicios/consultoria.html">Consultoría informática</a></li>
+                        <li><a href="./servicios/diseñoydesarrollo.html">Diseño y desarrollo</a></li>
+                        <li><a href="./servicios/seguridadinformatica.html">Seguridad informática</a></li>
+                        <li><a href="./servicios/mantenimiento.html">Mantenimiento en general</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -81,6 +160,7 @@
         </div>
     </footer>
     <!--Fin Footer-->
+    <script src="../js/serviciosenlanube.js"></script>
 </body>
 
 </html>

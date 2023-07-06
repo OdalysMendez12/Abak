@@ -27,7 +27,7 @@
 .header-vistas nav {
     float: right;
     padding: 15px 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .header-vistas nav a {
@@ -93,7 +93,7 @@
     }
 
     .header-vistas nav {
-        width: 100%;
+        width: 100%; 
         text-align: center;
         line-height: 100px;
     }
@@ -121,7 +121,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .contenedor-consultoria {
@@ -136,11 +136,12 @@
     margin-left: 20px;
     float: right;
     padding-right: 2.5rem;
+    border-radius: 15px;
 }
 
 .contenedor-consultoria .texto-uno {
-    font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     text-align: justify;
@@ -148,13 +149,13 @@
 
 
 .contenedor-consultoria .texto-dos {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 30px;
     background: #b5b5b5;
     padding: 40px;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -162,17 +163,17 @@
 }
 
 .contenedor-consultoria .texto-dos ul {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
     list-style-type: "✔ ";
     margin-top: 20px;
 }
 
 .contenedor-consultoria .texto-tres {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -180,14 +181,13 @@
 }
 
 .contenedor-consultoria .texto-tres ul {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: left;
     list-style-type: circle;
     margin-top: 10px;
     margin-left: 60px;
     margin-bottom: 60px;
     font-weight: lighter;
-
 }
 
 .contenedor-consultoria .cards {
@@ -242,7 +242,7 @@
     background-color: #eee;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 15px;
     margin: 0;
@@ -277,7 +277,7 @@
 .face.front {
     background-color: #3456c7;
     border-radius: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/
@@ -304,12 +304,12 @@
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .footer .grupo-1 .box .masInfo p {
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -318,7 +318,7 @@
     margin-bottom: 10px;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-1 .box .masInfo i {
@@ -361,10 +361,11 @@
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    list-style: circle;
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
@@ -373,7 +374,7 @@
     margin-bottom: 10px;
     font-size: 18px;
     transition: all 0.3s ease;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: disc;
 }
 
@@ -391,8 +392,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-2 small {

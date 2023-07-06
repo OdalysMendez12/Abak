@@ -30,7 +30,7 @@ html {
 .header-vistas nav {
     float: right;
     padding: 15px 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .header-vistas nav a {
@@ -118,6 +118,7 @@ section {
     height: 100vh;
     display: grid;
     place-items: center;
+    margin-bottom: 40px;
 }
 
 section .info-contacto {
@@ -134,6 +135,7 @@ section .info-contacto {
     -webkit-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
     -moz-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
     box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
+    margin-bottom: 25px;
 }
 
 section .info-contacto .formulario {
@@ -150,9 +152,9 @@ section .info-contacto .formulario form {
 }
 
 section .info-contacto .formulario .texto h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: bold;
     color: #100d6a;
     text-align: center;
     padding: 0;
@@ -160,7 +162,7 @@ section .info-contacto .formulario .texto h2 {
 }
 
 section .info-contacto .formulario .texto p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     margin-bottom: 10px;
     line-height: 1.5;
@@ -177,7 +179,7 @@ section .info-contacto .formulario form .info-usuario {
 }
 
 section .info-contacto .formulario form .info-usuario label {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 0.8rem;
     margin-bottom: 5px;
@@ -190,7 +192,7 @@ section .info-contacto .formulario form .info-usuario textarea {
     padding: 10px;
     border-radius: 20px;
     color: #100d6a;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     resize: none;
 }
 
@@ -201,7 +203,7 @@ section .info-contacto .formulario form .info-usuario textarea:focus {
 }
 
 section .info-contacto .formulario form input[type="submit"] {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #3456c7;
     display: inline-block;
     text-align: center;
@@ -237,21 +239,6 @@ section .info-contacto .contenedor-contacto {
     align-items: self-end;
 }
 
-section .info-contacto .contenedor-contacto .imagen-contacto {
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
-section .info-contacto .contenedor-contacto .imagen-contacto img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 section .info-contacto .contenedor-contacto .textBox {
     display: flex;
     justify-content: center;
@@ -261,7 +248,7 @@ section .info-contacto .contenedor-contacto .textBox {
 }
 
 section .info-contacto .contenedor-contacto .textBox .contacto {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
     font-size: 20px;
     text-decoration: none;
@@ -315,8 +302,6 @@ margin-bottom: 30px;
         font-size: 15px;
 
     }
-
-
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/
@@ -339,16 +324,16 @@ margin-bottom: 30px;
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem; 
+    font-size: 1rem; 
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .footer .grupo-1 .box .masInfo p {
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -357,7 +342,7 @@ margin-bottom: 30px;
     margin-bottom: 10px;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-1 .box .masInfo i {
@@ -400,10 +385,11 @@ margin-bottom: 30px;
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    list-style: circle;
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
@@ -412,7 +398,7 @@ margin-bottom: 30px;
     margin-bottom: 10px;
     font-size: 18px;
     transition: all 0.3s ease;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: disc;
 }
 
@@ -430,8 +416,7 @@ margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-2 small {

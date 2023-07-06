@@ -31,8 +31,7 @@ html {
 .header-vistas nav {
     float: right;
     padding: 15px 10px;
-    font-family: 'Poppins', sans-serif;
-}
+    font-family: 'Merriweather', serif;}
 
 .header-vistas nav a {
     display: inline-block;
@@ -124,8 +123,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
-}
+    font-family: 'Merriweather', serif;}
 
 .General {
     border-radius: 7px;
@@ -135,7 +133,7 @@ html {
 }
 
 .letras_titulo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
     justify-content: center;
@@ -144,13 +142,13 @@ html {
     text-shadow: 0 0 5px #3456c7;
     color: #000000;
     padding-top: 80px;
-    font-family: 'Poppins', sans-serif;
-}
+    font-family: 'Merriweather', serif;}
 
 .contenedor-qs {
     display: flex;
     justify-content: center;
     padding: 30px 50px 50px;
+    font-weight: bolder;
 }
 
 .imagen-qs {
@@ -173,7 +171,7 @@ img {
 
 .descripcion-qs p {
     padding: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -188,8 +186,7 @@ img {
 }
 
 .card-front h3 {
-    font-family: 'Poppins', sans-serif;
-
+    font-family: 'Merriweather', serif;
 }
 
 .card {
@@ -252,7 +249,7 @@ img {
 
 .card-back p {
     color: #ffffff;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     text-align: center;
 }
@@ -277,16 +274,15 @@ img {
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
-}
+    font-family: 'Merriweather', serif;}
 
 .footer .grupo-1 .box .masInfo p {
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -295,7 +291,7 @@ img {
     margin-bottom: 10px;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-1 .box .masInfo i {
@@ -338,10 +334,11 @@ img {
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    list-style: circle;
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
@@ -350,7 +347,7 @@ img {
     margin-bottom: 10px;
     font-size: 18px;
     transition: all 0.3s ease;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: disc;
 }
 
@@ -368,8 +365,7 @@ img {
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-2 small {

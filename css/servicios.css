@@ -27,7 +27,7 @@
 .header-vistas nav {
     float: right;
     padding: 15px 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .header-vistas nav a {
@@ -114,7 +114,7 @@
 }
 
 .descripcion-servicios h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 2rem;
     text-transform: uppercase;
@@ -122,7 +122,7 @@
 }
 
 .descripcion-servicios p {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     margin: 25px;
     text-align: center;
@@ -206,15 +206,14 @@ section .card .imagen img {
     font-size: 1rem;
     margin-bottom: 10px;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
     text-align: center;
 }
 
 .servicios .detalle-servicio {
     font-size: 15px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: justify;
-
 }
 
 .servicios {
@@ -227,7 +226,7 @@ section .card .imagen img {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card .button button {
@@ -294,16 +293,16 @@ section .card .imagen img {
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .footer .grupo-1 .box .masInfo p {
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -312,7 +311,7 @@ section .card .imagen img {
     margin-bottom: 10px;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-1 .box .masInfo i {
@@ -355,10 +354,11 @@ section .card .imagen img {
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    list-style: circle;
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
@@ -367,7 +367,7 @@ section .card .imagen img {
     margin-bottom: 10px;
     font-size: 18px;
     transition: all 0.3s ease;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: disc;
 }
 
@@ -385,8 +385,7 @@ section .card .imagen img {
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-2 small {

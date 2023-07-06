@@ -205,10 +205,11 @@
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    list-style: circle;
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {

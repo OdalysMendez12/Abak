@@ -27,7 +27,7 @@
 .header-vistas nav {
     float: right;
     padding: 15px 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .header-vistas nav a {
@@ -107,6 +107,7 @@
         line-height: 50px;
     }
 }
+
 /*--------------------------------- CONTENIDO ---------------------------------*/
 .tittle h1 {
     color: #000000;
@@ -120,9 +121,190 @@
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
+.contenedor-sn .contenido-sn {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    text-align: justify;
+}
+
+.contenedor-sn .contenido-sn .texto-uno {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contenedor-sn .contenido-sn ul {
+    text-align: left;
+    list-style-type: "✔ ";
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+.contenedor-sn .contenido-sn li {
+    margin-bottom: 10px;
+}
+
+.contenedor-sn .imagen {
+    width: 600px;
+    height: 335px;
+    margin-right: 100px;
+    float: right;
+    padding-right: 2.5rem;
+}
+
+.contenedor-sn .contenido-sn .subtitulo {
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contenedor-sn .contenido-sn .texto-dos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    padding-bottom: 50px;
+    background-color: #9d9d9d;
+    padding: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 100%;
+}
+
+.card {
+    width: 250px;
+    height: 200px;
+    background: #3456c7;
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    background: #100d6a;
+    color: #ffffff;
+}
+
+.first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+}
+
+.second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 15px;
+    text-align: center;
+    transform: rotate(0deg);
+    padding: 5px;
+}
+
+.carrousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrousel h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+.carrousel .marcas {
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.carrousel img {
+    width: 350px;
+    height: 200px;
+}
+
+.carrousel .asociados {
+    width: calc(100% / 3 -3em);
+    background-color: #ffffff;
+    min-width: 5vh;
+}
+
+.carrousel .boton {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .punto {
+    width: 15px;
+    height: 15px;
+    margin: 0.5rem;
+    border-radius: 50px;
+    background-color: #3456c7;
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.carrousel .punto.activo {
+    background-color: #040230;
+}
 
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
@@ -136,7 +318,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px; 
+    grid-gap: 80px;
     padding: 20px 0px;
     color: #ffffff;
 }
@@ -144,16 +326,16 @@
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .footer .grupo-1 .box .masInfo p {
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -162,7 +344,7 @@
     margin-bottom: 10px;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-1 .box .masInfo i {
@@ -205,10 +387,11 @@
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    list-style: circle;
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
@@ -217,7 +400,7 @@
     margin-bottom: 10px;
     font-size: 18px;
     transition: all 0.3s ease;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style-type: disc;
 }
 
@@ -235,8 +418,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-2 small {
