@@ -4,71 +4,7 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Raleway', sans-serif;
-
-}
-
-/*--------------------------------- HEADER INICIO ---------------------------------*/
-header {
-    height: 65px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 6;
-}
-
-.headerVistas {
-    background-color: #3f4042;
-}
-
-#logo {
-    display: inline-block;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-left: 15px;
-}
-
-.vistasIniciales {
-    float: right;
-    line-height: 60px;
-    margin-right: 20px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-
-.vistasIniciales a {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-
-}
-
-.vistasIniciales .link {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-    background-color: #3456c7;
-    border-radius: 30px;
-    padding: 10px;
-    transition: all 0.2s ease;
-}
-
-.vistasIniciales .link:hover {
-    color: #3456c7;
-    background-color: #ffffff;
-}
-
-.vistasIniciales a:hover {
-    color: #3456c7;
-}
-
-/*--------------------------------- HEADER VISTAS ---------------------------------*/
+/*--------------------------------- HEADER ---------------------------------*/
 .header-vistas {
     width: 100%;
     overflow: hidden;
@@ -171,6 +107,22 @@ header {
         line-height: 50px;
     }
 }
+/*--------------------------------- CONTENIDO ---------------------------------*/
+.tittle h1 {
+    color: #000000;
+    margin: 20px;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    border-bottom: solid 3px;
+    line-height: 42px;
+    padding: 0px 0px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
@@ -184,36 +136,40 @@ header {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px;
+    grid-gap: 80px; 
     padding: 20px 0px;
     color: #ffffff;
 }
 
-.footer .grupo-1 h2 {
+.footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding-bottom: 15px;
     display: flex;
+    letter-spacing: 3px;
     font-family: 'Poppins', sans-serif;
 }
 
 .footer .grupo-1 .box .masInfo p {
-    text-align: left;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
-
+    transition: all 0.5s ease;
 }
 
 .footer .grupo-1 .box .masInfo a {
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 0.8rem;
+    font-size: 18px;
     text-decoration: none;
-    transition: all 0.5s ease;
-
+    font-family: 'Raleway', sans-serif;
 }
 
-.footer .grupo-1 .box .masInfo a:hover {
+.footer .grupo-1 .box .masInfo i {
+    font-size: 0.8rem;
+}
+
+.footer .grupo-1 .box .masInfo p:hover {
     background-color: #3456c7;
     color: #ffffff;
     border-radius: 30px;
@@ -224,7 +180,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 20px;
 }
 
 .footer .grupo-1 .box .redesSociales a {
@@ -249,19 +205,21 @@ header {
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: right;
-    font-family: 'Raleway', sans-serif;
-
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
     text-decoration: none;
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 0.8rem;
-    letter-spacing: 4px;
+    font-size: 18px;
     transition: all 0.3s ease;
+    font-family: 'Raleway', sans-serif;
+    list-style-type: disc;
 }
 
 .footer .grupo-1 .box .masServ a:hover {
@@ -269,7 +227,6 @@ header {
     font-weight: bold;
     text-decoration: underline;
 }
-
 
 .footer .grupo-2 {
     color: #ffffff;

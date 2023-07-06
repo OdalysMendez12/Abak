@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 20px;
-}
-
 /*--------------------------------- HEADER ---------------------------------*/
 .header-vistas {
     width: 100%;
@@ -31,7 +27,7 @@ html {
 .header-vistas nav {
     float: right;
     padding: 15px 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .header-vistas nav a {
@@ -97,7 +93,7 @@ html {
     }
 
     .header-vistas nav {
-        width: 100%;
+        width: 100%; 
         text-align: center;
         line-height: 100px;
     }
@@ -112,11 +108,11 @@ html {
     }
 }
 
-/*--------------------------------- CONTENIDO  QUIÉNES SOMOS ---------------------------------*/
-.tittle {
-    color: #100d6a;
+/*--------------------------------- CONTENIDO ---------------------------------*/
+.tittle h1 {
+    color: #000000;
     margin: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     letter-spacing: 3px;
     border-bottom: solid 3px;
     line-height: 42px;
@@ -124,120 +120,166 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
-}
-.General {
-    border-radius: 7px;
-    z-index: 2;
-    height: auto;
-    display: grid;
+    font-weight: 800;
+    font-family: 'Merriweather', serif;
 }
 
-.letras_titulo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    text-shadow: 0 0 5px #3456c7;
-    color: #000000;
-    padding-top: 80px;
-    font-family: 'Poppins', sans-serif;
+.contenedor-consultoria {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: auto;
 }
 
-.contenedor-qs {
-    display: flex;
-    justify-content: center;
-    padding: 30px 50px 50px;
-}
-
-.imagen-qs {
-    border-radius: 10px;
+.contenedor-consultoria .imagen {
     width: 600px;
-    height: 400px;
-    text-shadow: 0 0 5px #4a4a4a;
+    height: 340px;
+    margin-left: 20px;
+    float: right;
+    padding-right: 2.5rem;
+    border-radius: 15px;
 }
 
-img {
-    width: 100%;
-    display: block;
-    border-radius: 30px 30px 0 0;
-}
-
-.descripcion-qs {
-    margin-right: 15px;
+.contenedor-consultoria .texto-uno {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
     text-align: justify;
 }
 
-.descripcion-qs p {
-    padding: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.2rem;
+
+.contenedor-consultoria .texto-dos {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    background: #b5b5b5;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: justify;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-weight: bolder;
 }
 
+.contenedor-consultoria .texto-dos ul {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    list-style-type: "✔ ";
+    margin-top: 20px;
+}
 
-/*slider, mision, vision, valores*/
-.mvv {
+.contenedor-consultoria .texto-tres {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-weight: bolder;
+}
+
+.contenedor-consultoria .texto-tres ul {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    list-style-type: circle;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    font-weight: lighter;
+}
+
+.contenedor-consultoria .cards {
+    margin-bottom: 20px;
+}
+
+.contenedor-consultoria .cards-consultoria {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     place-items: center;
     margin-bottom: 40px;
+    margin-block-start: 10px;
 }
 
-.mvv figure {
+.container {
+    margin: 0 auto;
+}
+
+.card {
     position: relative;
-    height: 350px;
-    width: 350px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    margin: 1em;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 }
 
-.mvv figure img {
-    width: 100%;
-    height: 100%;
-    transition: all .5s ease-in-out;
-    border-radius: 10px;
-}
-
-.mvv figure .capa {
+.face {
     position: absolute;
-    top: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(119, 119, 123, 0.9);
-    opacity: 0;
-    transition: all .5s ease-in-out;
-    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face.back {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.face.back b {
+    margin: 0;
+    padding: 0;
+}
+
+.face.back .desc {
+    background-color: #eee;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+
+}
+
+.face.front {
+    transition: 0.5s;
     text-align: center;
 }
-.mvv figure:hover > .capa{
-    opacity: 1;
-    visibility: visible;
-}
-.mvv figure:hover > .capa h2{
-margin-top: 70px;
-margin-bottom: 15px;
+
+.face.front b {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
-.mvv figure .capa h2 {
-color: #ffffff;
-font-family: 'Poppins', sans-serif;
-font-weight: bolder;
-margin-bottom: 120px;
-transition: all .5s ease-out;
-margin-top: 30px;
+.card:hover .face.front {
+    height: 60px;
 }
-.mvv figure .capa p {
-color: #ffffff;
-font-family: 'Raleway', sans-serif;
-font-size: 20px;
-margin: 10px;
+
+.card:hover .face.front b {
+    font-size: 1rem;
 }
+
+.face.front {
+    background-color: #3456c7;
+    border-radius: 15px;
+    font-family: 'Merriweather', serif;
+}
+
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
     width: 100%;
@@ -255,31 +297,35 @@ margin: 10px;
     color: #ffffff;
 }
 
-.footer .grupo-1 h2 {
+.footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding-bottom: 15px;
     display: flex;
-    font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
+    font-family: 'Merriweather', serif;
 }
 
 .footer .grupo-1 .box .masInfo p {
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.5s ease;
 }
 
 .footer .grupo-1 .box .masInfo a {
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
-    transition: all 0.5s ease;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
-.footer .grupo-1 .box .masInfo a:hover {
+.footer .grupo-1 .box .masInfo i {
+    font-size: 0.8rem;
+}
+
+.footer .grupo-1 .box .masInfo p:hover {
     background-color: #3456c7;
     color: #ffffff;
     border-radius: 30px;
@@ -290,7 +336,7 @@ margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 20px;
 }
 
 .footer .grupo-1 .box .redesSociales a {
@@ -315,28 +361,28 @@ margin: 10px;
     color: #ffffff;
 }
 
-.footer .grupo-1 .box .masServ p {
-    text-align: right;
-    font-family: 'Raleway', sans-serif;
-
+.footer .grupo-1 .box .masServ ul {
+    text-align: left;
+    font-family: 'Merriweather', serif;
+    list-style: disc;
+    margin-left: 35px;
 }
 
 .footer .grupo-1 .box .masServ a {
     text-decoration: none;
     color: #ffffff;
     margin-bottom: 10px;
-    font-size: 12px;
-    letter-spacing: 4px;
-
+    font-size: 18px;
     transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: disc;
 }
 
 .footer .grupo-1 .box .masServ a:hover {
     color: #3456c7;
     font-weight: bold;
-    text-decoration:underline;
+    text-decoration: underline;
 }
-
 
 .footer .grupo-2 {
     color: #ffffff;
@@ -346,8 +392,7 @@ margin: 10px;
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
-    font-family: 'Raleway', sans-serif;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer .grupo-2 small {

@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 20px;
-}
-
-/*--------------------------------- HEADER VISTAS ---------------------------------*/
+/*--------------------------------- HEADER ---------------------------------*/
 .header-vistas {
     width: 100%;
     overflow: hidden;
     background: #ffffff;
+    margin-bottom: 20px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5) !important;
 }
 
@@ -111,197 +108,202 @@ html {
     }
 }
 
-/*--------------------------------- CONTENIDO CONTACTANOS ---------------------------------*/
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    margin-bottom: 40px;
-}
-
-section .info-contacto {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
-    padding: 35px;
-    width: 90%;
-    height: 90%;
-    background-image: url(../img/fondo-contactanos.jpg);
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    -webkit-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
-    -moz-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
-    box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
-    margin-bottom: 25px;
-}
-
-section .info-contacto .formulario {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 85%;
-    margin-left: 35px;
-}
-
-section .info-contacto .formulario form {
-    width: 100%;
-}
-
-section .info-contacto .formulario .texto h2 {
-    font-family: 'Merriweather', serif;
+/*--------------------------------- CONTENIDO ---------------------------------*/
+.tittle h1 {
+    color: #000000;
+    margin: 20px;
     font-size: 2rem;
-    font-weight: bold;
-    color: #100d6a;
-    text-align: center;
-    padding: 0;
-    letter-spacing: 2px;
-}
-
-section .info-contacto .formulario .texto p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    line-height: 1.5;
-    text-align: center;
-    color: #100d6a;
-    font-weight: 600;
-}
-
-section .info-contacto .formulario form .info-usuario {
+    letter-spacing: 3px;
+    border-bottom: solid 3px;
+    line-height: 42px;
+    padding: 0px 0px 8px 0px;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    color: #3456c7;
-}
-
-section .info-contacto .formulario form .info-usuario label {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-}
-
-section .info-contacto .formulario form .info-usuario input[type="text"],
-section .info-contacto .formulario form .info-usuario input[type="email"],
-section .info-contacto .formulario form .info-usuario textarea {
-    border: none;
-    padding: 10px;
-    border-radius: 20px;
-    color: #100d6a;
-    font-family: 'Montserrat', sans-serif;
-    resize: none;
-}
-
-section .info-contacto .formulario form .info-usuario input[type="text"]:focus,
-section .info-contacto .formulario form .info-usuario input[type="email"]:focus,
-section .info-contacto .formulario form .info-usuario textarea:focus {
-    outline: 3px solid #100d6a;
-}
-
-section .info-contacto .formulario form input[type="submit"] {
-    font-family: 'Montserrat', sans-serif;
-    background: #3456c7;
-    display: inline-block;
-    text-align: center;
-    width: 120px;
-    padding: 12px;
-    border-radius: 25px;
-    color: #ffffff;
-    letter-spacing: 2px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    font-size: 0.8rem;
-    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.8);
-    font-weight: bolder;
-    margin-bottom: 25px;
-}
-
-section .info-contacto .formulario form span {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0;
-}
-
-section .info-contacto .formulario form input[type="submit"]:hover {
-    color: #3456c7;
-    background: #ffffff;
-}
-
-section .info-contacto .contenedor-contacto {
-    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: self-end;
+    font-weight: 800;
+    font-family: 'Merriweather', serif;
 }
 
-section .info-contacto .contenedor-contacto .textBox {
+.contenedor-sn .contenido-sn {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    text-align: justify;
+}
+
+.contenedor-sn .contenido-sn .texto-uno {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contenedor-sn .contenido-sn ul {
+    text-align: left;
+    list-style-type: "✔ ";
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+
+.contenedor-sn .contenido-sn li {
+    margin-bottom: 10px;
+}
+
+.contenedor-sn .imagen {
+    width: 600px;
+    height: 335px;
+    margin-right: 100px;
+    float: right;
+    padding-right: 2.5rem;
+}
+
+.contenedor-sn .contenido-sn .subtitulo {
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #100d6a;
-    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
-section .info-contacto .contenedor-contacto .textBox .contacto {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 20px;
-    text-align: left;
-}
-
-section .info-contacto .contenedor-contacto .textBox .contacto a {
-    padding: 10px;
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: #100d6a;
-    transition: all 0.5s ease;
-
-}
-
-section .info-contacto .contenedor-contacto .textBox .contacto a:hover {
-    background-color: #000000;
-    color: #ffffff;
-    border-radius: 35px;
-    padding: 10px;
-}
-/*----- Para pantallas -----*/
-@media only screen and (max-width: 1200px) {
-    section .info-contacto{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        position: relative;
-    }
-}
-/*----- Para tabletas -----*/
-@media only screen and (max-width: 760px) {
-    section .info-contacto .contenedor-contacto{
-        height: 300px;
-        padding: 20px;
-    }
-    section .info-contacto .contenedor-contacto .imagen-contacto{
-        display: none;
-    }
-}
-/*----- Para celulares -----*/
-
-@media only screen and (max-width: 550px) {
-    section .info-contacto .formulario{
-    margin-left: 0px;
+.contenedor-sn .contenido-sn .texto-dos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    padding-bottom: 50px;
+    background-color: #9d9d9d;
+    padding: 40px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     width: 100%;
-    }
-    section .info-contacto .contenedor-contacto{
-margin-bottom: 30px;
-    }
-    section .info-contacto .contenedor-contacto .textBox .contacto p{
-        font-size: 15px;
+}
 
-    }
+.card {
+    width: 250px;
+    height: 200px;
+    background: #3456c7;
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+    background: #100d6a;
+    color: #ffffff;
+}
+
+.first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+}
+
+.second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+}
+
+.card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 15px;
+    text-align: center;
+    transform: rotate(0deg);
+    padding: 5px;
+}
+
+.carrousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrousel h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+.carrousel .marcas {
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 50px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.5s ease;
+    transform: translateX(0%);
+}
+
+.carrousel img {
+    width: 350px;
+    height: 200px;
+}
+
+.carrousel .asociados {
+    width: calc(100% / 3 -3em);
+    background-color: #ffffff;
+    min-width: 5vh;
+}
+
+.carrousel .boton {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrousel .punto {
+    width: 15px;
+    height: 15px;
+    margin: 0.5rem;
+    border-radius: 50px;
+    background-color: #3456c7;
+    list-style: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.carrousel .punto.activo {
+    background-color: #040230;
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/
@@ -316,7 +318,7 @@ margin-bottom: 30px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px; 
+    grid-gap: 80px;
     padding: 20px 0px;
     color: #ffffff;
 }
@@ -324,7 +326,7 @@ margin-bottom: 30px;
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1rem; 
+    font-size: 1rem;
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
