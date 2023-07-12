@@ -9,61 +9,73 @@ html {
 }
 
 /*--------------------------------- HEADER VISTAS ---------------------------------*/
-nav{
-    width: 90%;
-    max-width: 1000px;
+nav {
+    width: 100%;
     margin: auto;
-    overflow: hidden;
     background-color: #ffffff;
     font-size: 25px;
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5) !important;
-    transition: all 0.5s ease;
+    padding-left: 25px;
+    padding-right: 25px;
 }
-.menu-horizontal{
-    list-style-type: none;
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: space-around;
     font-size: 20px;
-    font-weight: bold;
-    font-family: 'Merriweather', serif;
 }
-.menu-horizontal li a{
-    display: block;
+
+.menu>li {
+    display: inline-block;
     padding-top: 20px;
     color: #100d6a;
     list-style: none;
-    transition: all 0.5s ease;
+    text-decoration: none;
+    border-radius: 40px;
+    position: relative;
+    max-width: 300px;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 10px;
+    color: #100d6a;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.menu-horizontal > li:hover{
+.menu li a:hover {
     background-color: #3456c7;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-radius: 40px;
+    color: #ffffff;
 
 }
 
-.menu-vertical{
-    position: absolute;
+.menu-servicios {
+    color: #ffffff;
     display: none;
-    list-style: none;
-    width: 200px;
-    background-color: #ffffff;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 
-.menu-horizontal li:hover .menu-vertical{
+.menu-servicios li a{
     display: block;
-}
-
-.menu-vertical li:hover{
-background-color: #100d6a;
-}
-
-.menu-vertical li a{
-    display: block;
-    color: #000000;
-    padding: 10px 10px 10px 15px;
+    padding: 10px;
     text-decoration: none;
+    min-width: max-content;
+z-index: 1;
+
 }
 
+.menu li:hover .menu-servicios{
+    display: block;
+}
 /*.header-vistas {
     width: 100%;
     overflow: hidden;
@@ -174,6 +186,8 @@ section {
     display: grid;
     place-items: center;
     margin-bottom: 40px;
+    z-index: 2;
+
 }
 
 section .info-contacto {
@@ -187,10 +201,11 @@ section .info-contacto {
     background-image: url(../img/fondo-contactanos.jpg);
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    -webkit-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
-    -moz-box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
-    box-shadow: 10px 10px 10px 5px rgba(153,153,153,0.73);
+    -webkit-box-shadow: 10px 10px 10px 5px rgba(153, 153, 153, 0.73);
+    -moz-box-shadow: 10px 10px 10px 5px rgba(153, 153, 153, 0.73);
+    box-shadow: 10px 10px 10px 5px rgba(153, 153, 153, 0.73);
     margin-bottom: 25px;
+
 }
 
 section .info-contacto .formulario {
@@ -327,34 +342,40 @@ section .info-contacto .contenedor-contacto .textBox .contacto a:hover {
     border-radius: 35px;
     padding: 10px;
 }
+
 /*----- Para pantallas -----*/
 @media only screen and (max-width: 1200px) {
-    section .info-contacto{
+    section .info-contacto {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         position: relative;
     }
 }
+
 /*----- Para tabletas -----*/
 @media only screen and (max-width: 760px) {
-    section .info-contacto .contenedor-contacto{
+    section .info-contacto .contenedor-contacto {
         height: 300px;
         padding: 20px;
     }
-    section .info-contacto .contenedor-contacto .imagen-contacto{
+
+    section .info-contacto .contenedor-contacto .imagen-contacto {
         display: none;
     }
 }
+
 /*----- Para celulares -----*/
 
 @media only screen and (max-width: 550px) {
-    section .info-contacto .formulario{
-    margin-left: 0px;
-    width: 100%;
+    section .info-contacto .formulario {
+        margin-left: 0px;
+        width: 100%;
     }
-    section .info-contacto .contenedor-contacto{
-margin-bottom: 30px;
+
+    section .info-contacto .contenedor-contacto {
+        margin-bottom: 30px;
     }
-    section .info-contacto .contenedor-contacto .textBox .contacto p{
+
+    section .info-contacto .contenedor-contacto .textBox .contacto p {
         font-size: 15px;
 
     }
@@ -372,7 +393,7 @@ margin-bottom: 30px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px; 
+    grid-gap: 80px;
     padding: 20px 0px;
     color: #ffffff;
 }
@@ -380,7 +401,7 @@ margin-bottom: 30px;
 .footer .grupo-1 h4 {
     justify-content: center;
     align-items: center;
-    font-size: 1rem; 
+    font-size: 1rem;
     padding-bottom: 15px;
     display: flex;
     letter-spacing: 3px;
