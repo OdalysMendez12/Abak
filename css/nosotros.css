@@ -112,19 +112,6 @@ html {
 }
 
 /*--------------------------------- CONTENIDO  QUIÉNES SOMOS ---------------------------------*/
-.tittle h2 {
-    color: #000000;
-    margin: 20px;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    border-bottom: solid 3px;
-    line-height: 42px;
-    padding: 0px 0px 8px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Merriweather', serif;}
-
 .General {
     border-radius: 7px;
     z-index: 2;
@@ -138,7 +125,6 @@ html {
     text-align: center;
     justify-content: center;
     letter-spacing: 5px;
-    text-transform: uppercase;
     text-shadow: 0 0 5px #3456c7;
     color: #000000;
     padding-top: 80px;
@@ -177,6 +163,13 @@ img {
 
 
 /*mision, vision, valores*/
+.contenedor-mvv{
+    color: #000000;
+    margin: 20px;
+    border-top: solid 3px;
+    line-height: 42px;
+    padding: 0px 0px 8px 0px;
+}
 .mvv {
     width: 100%;
     display: grid;
@@ -252,6 +245,7 @@ img {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     text-align: center;
+    line-height: normal;
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/
