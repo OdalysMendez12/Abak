@@ -9,7 +9,62 @@ html {
 }
 
 /*--------------------------------- HEADER VISTAS ---------------------------------*/
-.header-vistas {
+nav{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-size: 25px;
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.5s ease;
+}
+.menu-horizontal{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+}
+.menu-horizontal li a{
+    display: block;
+    padding-top: 20px;
+    color: #100d6a;
+    list-style: none;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover{
+    background-color: #3456c7;
+
+}
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: #ffffff;
+}
+
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+
+.menu-vertical li:hover{
+background-color: #100d6a;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: #000000;
+    padding: 10px 10px 10px 15px;
+    text-decoration: none;
+}
+
+/*.header-vistas {
     width: 100%;
     overflow: hidden;
     background: #ffffff;
@@ -110,7 +165,7 @@ html {
         line-height: 50px;
     }
 }
-
+*/
 /*--------------------------------- CONTENIDO CONTACTANOS ---------------------------------*/
 section {
     position: relative;
@@ -254,6 +309,7 @@ section .info-contacto .contenedor-contacto .textBox .contacto {
     text-decoration: none;
     padding: 20px;
     text-align: left;
+    line-height: 2rem;
 }
 
 section .info-contacto .contenedor-contacto .textBox .contacto a {
