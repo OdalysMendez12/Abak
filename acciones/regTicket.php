@@ -41,11 +41,30 @@ if (isset($_POST['Enviar'])) {
         $resultado = mysqli_stmt_execute($stmt);
 
         if (!$resultado) {
-            echo '<script>alert("Los datos no se insertaron.");</script>';
+            echo '<script>alert("Los datos no se insertaron en la tabla tickets.");</script>';
         } else {
-            echo '<script>
-                    alert("Los datos se insertaron.");
-                </script>';
+            // Obtener la clave del ticket recién insertado
+// Obtener el último ID ocupado
+        $query = "SELECT MAX(id) AS ultimo_id FROM expediente";
+        $resultado2 = mysqli_query($conexion, $query);
+        $fila2 = mysqli_fetch_assoc($resultado2);
+        $ultimoId = $fila2['ultimo_id'];
+
+        // Calcular el siguiente ID
+        $siguienteId = $ultimoId + 1;
+            // Insertar en la tabla "expediente"
+            $insertarExpediente = "INSERT INTO expediente (id ,fk_clave_ticket, fk_clave_equipo, fk_clave_usuario)
+                VALUES ('$siguienteId' ,'$codigo', '$equipo', '$usuario')";
+
+            $resultadoExpediente = mysqli_query($conexion, $insertarExpediente);
+
+            if (!$resultadoExpediente) {
+                echo '<script>alert("Los datos no se insertaron en la tabla expediente.");</script>';
+            } else {
+                echo '<script>
+                        alert("Los datos se insertaron correctamente.");
+                    </script>';
+            }
         }
     } else {
         // Si no se seleccionó ningún archivo, realizar la inserción sin el campo de archivo adjunto
@@ -57,15 +76,26 @@ if (isset($_POST['Enviar'])) {
         $resultado = mysqli_query($conexion, $insertarTicket);
 
         if (!$resultado) {
-            echo '<script>alert("Los datos no se insertaron.");</script>';
+            echo '<script>alert("Los datos no se insertaron en la tabla tickets.");</script>';
         } else {
-            echo '<script>
-                    alert("Los datos se insertaron.");
-                </script>';
+            // Obtener la clave del ticket recién insertado
+
+            // Insertar en la tabla "expediente"
+            $insertarExpediente = "INSERT INTO expediente (id,fk_clave_ticket, fk_clave_equipo, fk_clave_usuario)
+                VALUES ('$siguienteId','$codigo', '$equipo', '$usuario')";
+
+            $resultadoExpediente = mysqli_query($conexion, $insertarExpediente);
+
+            if (!$resultadoExpediente) {
+                echo '<script>alert("Los datos no se insertaron en la tabla expediente.");</script>';
+            } else {
+                echo '<script>
+                        alert("Los datos se insertaron correctamente.");
+                    </script>';
+            }
         }
     }
 }
-
 
 header("Location: ../Admin/ticket.php");
 ?>
