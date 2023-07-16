@@ -19,7 +19,7 @@
                     <a href='admin.php'>Inicio</a>
                 </li>
                 <li class='dropdown-link'>
-                    <a href='acciones/Log-out.php'>Logout</a>
+                    <a href='../acciones/Log-out.php'>Logout</a>
                 </li>
             </ul>
         </li>
@@ -39,14 +39,6 @@
                     <div class="sidebar">
                         <nav class="mt-2">
                             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                                <li class="nav-item">
-                                    <a href="userGerente.php" class="nav-link">
-                                        <i class="nav-icon fas fa-users"></i>
-                                        <p>
-                                            Usuarios
-                                        </p>
-                                    </a>
-                                </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="nav-icon fas fa-copy"></i>
@@ -86,13 +78,13 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link">
+                                            <a href="kardex.php" class="nav-link">
                                             <i class="fas fa-book-open"></i>
                                                 <p>Expediente</p>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="" class="nav-link">
+                                            <a href="asignaciones.php" class="nav-link">
                                             <i class="far fa-address-book"></i>
                                                 <p>Asignaciones</p>
                                             </a>
@@ -199,7 +191,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="acciones/Log-out.php" class="nav-link">
+                                    <a href="../acciones/Log-out.php" class="nav-link">
                                         <i class="nav-icon fas fa-power-off"></i>
                                         <p>
                                             Cerrar Sesión
