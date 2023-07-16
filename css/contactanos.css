@@ -57,25 +57,40 @@ nav ul {
 }
 
 .menu-servicios {
-    color: #ffffff;
-    display: none;
-    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
     font-family: 'Montserrat', sans-serif;
-    position: relative;
-}
-
-.menu-servicios li a{
-    display: block;
+    background-color: #ffffff;
+    display: none;
+    width: max-content;
     padding: 10px;
-    text-decoration: none;
-    min-width: max-content;
-z-index: 1;
-
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.menu li:hover .menu-servicios{
+.menu>li:hover .menu-servicios {
     display: block;
 }
+
+.menu-servicios li {
+    padding: 5px 0;
+}
+
+.menu-servicios li a {
+    color: #100d6a;
+    font-weight: normal;
+    text-decoration: none;
+    list-style: none;
+    padding: 8px;
+
+}
+
+.menu-servicios li :hover {
+    color: #365ad3;
+}
+
 /*.header-vistas {
     width: 100%;
     overflow: hidden;
@@ -186,7 +201,7 @@ section {
     display: grid;
     place-items: center;
     margin-bottom: 40px;
-    z-index: 2;
+    z-index: 1;
 
 }
 
