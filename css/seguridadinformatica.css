@@ -5,109 +5,87 @@
 }
 
 /*--------------------------------- HEADER ---------------------------------*/
-.header-vistas {
+nav {
     width: 100%;
-    overflow: hidden;
-    background: #ffffff;
-    margin-bottom: 20px;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5) !important;
-}
-
-.wrapper-vistas {
-    width: 90%;
-    max-width: 1000px;
     margin: auto;
-    overflow: hidden;
-}
-
-.header-vistas .logo-vistas {
-    float: left;
-}
-
-.header-vistas nav {
-    float: right;
-    padding: 15px 10px;
-    font-family: 'Merriweather', serif;
-}
-
-.header-vistas nav a {
-    display: inline-block;
-    color: #100d6a;
-    text-decoration: none;
-    padding: 5px 10px;
-    line-height: normal;
-    font-size: 20px;
-    font-weight: bold;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    border-radius: 30px;
-}
-
-.header-vistas nav .efecto {
-    display: inline-block;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 5px 10px;
-    line-height: normal;
-    font-size: 20px;
-    font-weight: bold;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
-    border-radius: 30px;
-    background-color: #3456c7;
-}
-
-.header-vistas nav .efecto:hover {
     background-color: #ffffff;
-    color: #3456c7;
+    font-size: 25px; 
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5) !important;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-.header-vistas nav a:hover {
-    background: #3456c7;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.menu>li {
+    display: inline-block;
+    padding-top: 20px;
+    color: #100d6a;
+    list-style: none;
+    text-decoration: none;
+    border-radius: 40px;
+    position: relative;
+    max-width: 300px;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 10px;
+    color: #100d6a;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #3456c7;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-radius: 40px;
     color: #ffffff;
-}
-
-.header2 {
-    position: fixed;
-    height: 100px;
-}
-
-.header2 .logo-vistas {
-    line-height: 100px;
 
 }
 
-.header2 nav {
-    line-height: 100px;
+.menu-servicios {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    display: none;
+    width: max-content;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.contenido-servicios p {
-    margin-bottom: 1rem;
+.menu>li:hover .menu-servicios {
+    display: block;
 }
 
-@media screen and (max-width: 900px) {
-    .header-vistas .logo-vistas {
-        align-items: center;
-    }
-
-    .header-vistas nav {
-        width: 100%;
-        text-align: center;
-        line-height: 100px;
-    }
-
-    .header2 {
-        height: auto;
-    }
-
-    .header2 .logo-vistas,
-    .header2 nav {
-        line-height: 50px;
-    }
+.menu-servicios li {
+    padding: 5px 0;
 }
 
+.menu-servicios li a {
+    color: #100d6a;
+    font-weight: normal;
+    text-decoration: none;
+    list-style: none;
+    padding: 8px;
+
+}
+
+.menu-servicios li :hover {
+    color: #365ad3;
+}
 /*--------------------------------- CONTENIDO ---------------------------------*/
 .tittle h1 {
     color: #000000;
