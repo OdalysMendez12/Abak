@@ -12,7 +12,7 @@ nav {
     font-size: 25px;
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5) !important;
     padding-left: 25px;
-    padding-right: 25px; 
+    padding-right: 25px;
 }
 
 nav ul {
@@ -86,6 +86,7 @@ nav ul {
 .menu-servicios li :hover {
     color: #365ad3;
 }
+
 /*--------------------------------- CONTENIDO ---------------------------------*/
 .tittle h1 {
     color: #000000;
@@ -102,30 +103,32 @@ nav ul {
     font-family: 'Merriweather', serif;
 }
 
-.contenedor-mg {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin: 20px;
+.contenedor-st {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin: auto;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     text-align: justify;
+    padding-bottom: 20px;
+    margin: 20px;
 }
 
-.contenedor-mg .descripcion {
-    margin-bottom: 20px;
-}
-
-.contenedor-mg .imagen {
-    width: 600px;
-    height: 350px;
-    padding-left: 15px;
+.contenedor-st .imagen {
+    width: 300px;
+    height: 150px;
     float: left;
-    padding-right: 2rem;
-    padding-left: 10px;
+    padding-right: 15px;
 }
 
-.contenedor-mg .textos {
+.contenedor-st .descripcion {
+    margin-bottom: 10px;
+}
+
+.contenedor-st .textos {
+    margin-top: 10px;
+    padding: 2rem;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -135,7 +138,7 @@ nav ul {
 
 }
 
-.contenedor-mg h2 {
+.contenedor-st h2 {
     text-align: left;
     font-size: 1.5rem;
     font-weight: bold;
@@ -144,7 +147,7 @@ nav ul {
     font-style: oblique;
 }
 
-.contenedor-mg ul {
+.contenedor-st ul {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     list-style-type: "✔️ ";
@@ -153,36 +156,104 @@ nav ul {
     font-weight: bold;
 }
 
-.contenedor-mg li {
+.contenedor-st li {
     margin-bottom: 10px;
 }
 
-.contenedor-mg .contenido-mg {
+.contenedor-st .contenido-st {
     background: #3456c7;
     padding: 30px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     width: 400px;
-    height: 250px;
+    height: 100px;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.38);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.38);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.38);
 }
 
-.contenedor-mg .contenido-mg h3 {
-    font-family: 'Merriweather', serif;
-    text-align: center;
-    margin-bottom: 10px;
-    color: #ffffff;
-    letter-spacing: 3px;
-    font-size: 1.5rem;
-}
-
-.contenedor-mg .contenido-mg p {
+.contenedor-st .contenido-st p {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 1rem;
+}
+.subtitulo h3 {
+    text-align: center;
+    font-family: 'Merriweather', serif; 
+    font-size: 1.5rem;
+}
 
+.tipo-servicio {
+    margin-top: 10px;
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin-bottom: 40px;
+    margin-block-start: 10px;
+}
+.card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #100d6a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #100d6a;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 2rem;
+    transform: rotateY(0deg);
+    font-family: 'Merriweather', serif; 
+}
+
+.card-back {
+    background-color: #3456c7;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border: 10px solid #3456c7;
+    border-radius: 10px;
+    justify-content: center;
+    transform: rotateY(180deg);
+    margin: 20px;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contenedor-st .comentario p{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #100d6a;
+    margin-top: 15px;
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/

@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 html {
     font-size: 20px;
 }
@@ -335,7 +335,7 @@ background-color: #364780;
     font-family: 'Merriweather', serif;
 }
 
-.footer .grupo-1 .box .masInfo i {
+.footer .grupo-1 .box .masInfo i { 
     font-size: 0.8rem;
 }
 

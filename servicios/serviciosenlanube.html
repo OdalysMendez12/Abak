@@ -21,20 +21,30 @@
 
 <body>
     <!--Inicio Header-->
-    <div class="header-vistas">
-        <div class="wrapper-vistas">
-            <div class="logo-vistas"><a href="../index.html"><img src="../img/logo.png"
-                        style="height: 70px; width: 120px;"></a></div>
-            <nav>
-                <a href="../index.html">Inicio</a>
-                <a href="../nosotros.html">Nosotros</a>
-                <a href="../servicios.html">Servicios</a>
-                <a class="efecto" href="../contactanos.html">Contáctanos</a>
-                <a href="../i_sesion.php" class="fa-solid fa-headset"></a>
-            </nav>
-        </div>
-    </div>
-    <!-- Fin Header -->
+    <nav>
+        <ul class="menu">
+            <a href="../index.html"><img src="../img/logo.png"
+                style="height: 70px; width: 120px;"></a>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../nosotros.html">Nosotros</a></li>
+            <li>
+                <a href="/servicios.html">Servicios</a>
+                <ul class="menu-servicios">
+                    <li><a href="./mesadeayuda.html">Mesa de ayuda (Help Desk)</a></li>
+                    <li><a href="./soportetecnico.html">Soporte técnico</a></li>
+                    <li><a href="./serviciosenlanube.html">Servicios en la nube</a></li>
+                    <li><a href="./consultoria.html">Consultoría informática</a></li>
+                    <li><a href="./diseñoydesarrollo.html">Diseño y desarrollo</a></li>
+                    <li><a href="./seguridadinformatica.html">Seguridad informática</a></li>
+                    <li><a href="./mantenimiento.html">Mantenimiento en general</a></li>
+                </ul>
+            </li>
+            
+            <li><a class="efecto" href="../contactanos.html">Contáctanos</a></li>
+            <li><a href="/i_sesion.php"><i class="fa-solid fa-headset"></i></a></li>
+        </ul>
+    </nav>
+<!-- Fin Header -->
     <!--Inicio Contenido-->
     <div class="contenedor-sn">
         <div class="tittle">
@@ -125,10 +135,11 @@
             <div class="box">
                 <h4>Más información</h4>
                 <div class="masInfo">
-                    <p><i class="fa-solid fa-phone"></i><a href="#"> 998 362 0116</a></p>
-                    <p><i class="fa-brands fa-whatsapp"></i><a href="#" onclick="sendWhatsAppMessage()"> 998 220 6852</a></p>
-                    <p><i class="fa-solid fa-envelope"></i><a href="#"> ventas@abaksoluciones.com</a></p>
-                </div>
+                    <p><i class="fa-solid fa-phone"></i><a href="tel:9983620116"> 998 362 0116</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i><a href="" onclick="sendWhatsAppMessage()"> 998 220
+                            6852</a></p>
+                    <p><i class="fa-solid fa-envelope"></i><a href=mailto:ventas@abaksoluciones.com>ventas@abaksoluciones.com</a></p>
+            </div>
             </div>
             <div class="box">
                 <h4>Síguenos</h4>
@@ -142,8 +153,8 @@
                 <h4>Nuestros servicios</h4>
                 <div class="masServ">
                     <ul>
-                        <li><a href="#">Mesa de ayuda (Help Desk)</a></li>
-                        <li><a href="#">Soporte técnico</a></li>
+                        <li><a href="./servicios/mesadeayuda.html">Mesa de ayuda (Help Desk)</a></li>
+                        <li><a href="./servicios/soportetecnico.html">Soporte técnico</a></li>
                         <li><a href="./servicios/serviciosenlanube.html">Servicios en la nube</a></li>
                         <li><a href="./servicios/consultoria.html">Consultoría informática</a></li>
                         <li><a href="./servicios/diseñoydesarrollo.html">Diseño y desarrollo</a></li>
