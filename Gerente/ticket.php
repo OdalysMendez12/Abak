@@ -125,19 +125,13 @@ if (!isset($_SESSION['correo'])) {
                                                 <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarTick<?php echo $contador ?>"></i>
                                                 
                                             </button>
-                                            <button class="btn btn-danger">
-                                                <a onclick="eliminarTic('<?php echo $fila['clave_ticket'] ?>')">
-                                                    <i class="fas fa-trash text-white"></i>
-                                                </a>
-                                            </button> 
-                                        
                                         </div>
                                     </td>
                                 </tr>
                                 <div class="modal fade" id="EditarTick<?php echo $contador ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <form action="../acciones/editarTick.php" method="POST">
+                                            <form action="acciones/editarTick.php" method="POST">
                                                 <div class="modal-body">
                                                     <h2>Editar Ticket</h2>
                                                     <div class="box-body">
@@ -205,26 +199,7 @@ if (!isset($_SESSION['correo'])) {
     </div>
     </div>
 
-    <script>
-        function eliminarTic(claveTicket) {
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: 'Esta acción eliminará el ticket seleccionado.',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redireccionar a la página de eliminación del usuario
-                    window.location.href = '../acciones/eliminarTicket.php?clave_ticket=' + claveTicket;
-                }
-            });
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <!--Script para el lenguaje en español e inicializacion de datatables-->

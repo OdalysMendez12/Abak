@@ -95,17 +95,12 @@ if (!isset($_SESSION['correo'])) {
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarCiu<?php echo $contador ?>"">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger">
-                                                <a onclick="eliminarCiu('<?php echo $fila['id'] ?>')">
-                                                    <i class="fas fa-trash text-white"></i>
-                                                </a>
-                                            </button> 
                                 </td>
                                 </tr>
                                 <div class="modal fade" id="EditarCiu<?php echo $contador ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <form action="../acciones/editarCiu.php" method="POST">
+                                            <form action="acciones/editarCiu.php" method="POST">
                                                 <div class="modal-body">
                                                     <h2>Editar Ciudad</h2>
                                                     <div class="box-body">
@@ -182,7 +177,7 @@ if (!isset($_SESSION['correo'])) {
 <div class="modal fade" id="CrearCiu">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="../acciones/regCiu.php" method="POST">
+            <form action="acciones/regCiu.php" method="POST">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
@@ -238,27 +233,6 @@ if (!isset($_SESSION['correo'])) {
         </div>
     </div>
 </div>
-<script>
-function eliminarCiu(id) {
-Swal.fire({
-title: '¿Estás seguro?',
-text: 'Esta acción eliminará la ciudad seleccionada.',
-icon: 'warning',
-showCancelButton: true,
-confirmButtonColor: '#d33',
-cancelButtonColor: '#3085d6',
-confirmButtonText: 'Eliminar',
-cancelButtonText: 'Cancelar'
-}).then((result) => {
-if (result.isConfirmed) {
-// Redireccionar a la página de eliminación del usuario
-window.location.href = '../acciones/eliminarCiu.php?id=' + id;
-}
-});
-}
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>

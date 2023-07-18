@@ -101,17 +101,12 @@ if (!isset($_SESSION['correo'])) {
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarSuc<?php echo $contador ?>">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger">
-                                                <a onclick="eliminarSuc('<?php echo $fila['id'] ?>')">
-                                                    <i class="fas fa-trash text-white"></i>
-                                                </a>
-                                            </button> 
                                 </td>
                                 </tr>
                                 <div class="modal fade" id="EditarSuc<?php echo $contador ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <form action="../acciones/editarSuc.php" method="POST">
+                                            <form action="acciones/editarSuc.php" method="POST">
                                                 <div class="modal-body">
                                                     <h2 style="margin-bottom: 1rem; text-align: center;">Editar Sucursal</h2>
                                                     <div class="box-body">
@@ -220,7 +215,7 @@ if (!isset($_SESSION['correo'])) {
 <div class="modal fade" id="CrearSuc">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="../acciones/regSuc.php" method="POST">
+            <form action="acciones/regSuc.php" method="POST">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
@@ -311,26 +306,6 @@ if (!isset($_SESSION['correo'])) {
         </div>
     </div>
 </div>
-<script>
-        function eliminarSuc(id) {
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: 'Esta acción eliminará la sucursal seleccionada.',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redireccionar a la página de eliminación del usuario
-                    window.location.href = '../acciones/eliminarSuc.php?id=' + id;
-                }
-            });
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>

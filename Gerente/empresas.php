@@ -4,7 +4,7 @@ session_start();
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['correo'])) {
-    header('Location: ../i_sesion.php');
+    header('Location: login.php');
     exit;
 }
 ?>
@@ -13,7 +13,7 @@ if (!isset($_SESSION['correo'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables bootstrap responsive-->
@@ -38,7 +38,8 @@ if (!isset($_SESSION['correo'])) {
     <link rel="stylesheet" href="../template/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="../template/plugins/summernote/summernote-bs4.min.css">
-    <title>Sucursales</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Empresas</title>
 </head>
 <body>
     <?php
@@ -53,11 +54,11 @@ if (!isset($_SESSION['correo'])) {
                     <div class="container">
                         <div class="col-mb-6">
                             <div class="col-9">
-                                <h1 class="m-2">Sucursales</h1>
+                                <h1 class="m-2">Empresas</h1>
                             </div>
                             <div class="box">
                 <div class="box-header">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#CrearSuc">Crear nuevo</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#CrearEmp">Crear nuevo</button>
                 </div>
                 <br>
                     <table class="table table-bordered table-hover table-striped" id="miTabla" >
@@ -67,20 +68,18 @@ if (!isset($_SESSION['correo'])) {
                                 <th>Nombre</th>
                                 <th>Municipio</th>
                                 <th>Ciudad</th>
-                                <th>Empresa</th>
                                 <th>Direccion</th>
-                                <th>Telefono</th>
-                                <th>Responsable</th>
+                                <th>RFC</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             include('../conec.php');/*Conexión a la Base de Datos*/
-                            $Consulta = "SELECT sucursal.id, sucursal.nombre_suc, estados.nombre AS fk_estado, municipio.nombre AS fk_municipio, ciudades.nombre AS fk_ciudad, 
-                            empresa.nombre AS fk_empresa, sucursal.direccion, sucursal.telefono, usuario.clave_usuario AS fk_responsable FROM sucursal
-                            INNER JOIN estados ON sucursal.fk_estado = estados.id INNER JOIN municipio ON sucursal.fk_municipio = municipio.id INNER JOIN ciudades ON sucursal.fk_ciudad = ciudades.id
-                            INNER JOIN empresa ON sucursal.fk_empresa = empresa.id INNER JOIN usuario ON sucursal.fk_responsable = usuario.clave_usuario";
+                            $Consulta = "SELECT empresa.id, empresa.nombre, estados.nombre AS fk_estado, municipio.nombre AS fk_municipio, ciudades.nombre AS fk_ciudad, 
+                            pais.nombre AS fk_pais, empresa.direccion, empresa.RFC FROM empresa
+                            INNER JOIN estados ON empresa.fk_estado = estados.id INNER JOIN municipio ON empresa.fk_municipio = municipio.id INNER JOIN ciudades ON empresa.fk_ciudad = ciudades.id
+                            INNER JOIN pais ON empresa.fk_pais = pais.id";
 
                             $resultado = mysqli_query($conexion, $Consulta);
                             $contador = 1;
@@ -88,40 +87,37 @@ if (!isset($_SESSION['correo'])) {
                             ?>
                                 <tr>
                                     <th scope="row"><?php echo $fila["id"] ?></th>
-                                    <td><?php echo $fila["nombre_suc"] ?></td>
+                                    <td><?php echo $fila["nombre"] ?></td>
                                     <td><?php echo $fila["fk_municipio"] ?></td>
                                     <td><?php echo $fila["fk_ciudad"] ?></td>
-                                    <td><?php echo $fila["fk_empresa"] ?></td>
                                     <td><?php echo $fila["direccion"] ?></td>
-                                    <td><?php echo $fila["telefono"] ?></td>
-                                    <td><?php echo $fila["fk_responsable"] ?></td>
+                                    <td><?php echo $fila["RFC"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
                                 <td>
                                     <button class="btn btn-success" style="margin-left: 0%;">
-                                        <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarSuc<?php echo $contador ?>">
+                                        <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarEmp<?php echo $contador ?>">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger">
-                                                <a onclick="eliminarSuc('<?php echo $fila['id'] ?>')">
-                                                    <i class="fas fa-trash text-white"></i>
-                                                </a>
-                                            </button> 
                                 </td>
                                 </tr>
-                                <div class="modal fade" id="EditarSuc<?php echo $contador ?>">
+                                <div class="modal fade" id="EditarEmp<?php echo $contador ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <form action="../acciones/editarSuc.php" method="POST">
+                                            <form action="acciones/editarEmp.php" method="POST">
                                                 <div class="modal-body">
                                                     <h2 style="margin-bottom: 1rem; text-align: center;">Editar Sucursal</h2>
                                                     <div class="box-body">
                                                         <div class="form-group">
                                                             <h2>ID:</h2>
-                                                            <input class="form-control" type="text" name="id" value="<?php echo $contador ?>" readonly /> 
-                                                        </div>                        
+                                                            <input class="form-control" type="text" name="id" value="<?php echo $contador ?>" /> 
+                                                        </div>
                                                         <div class="form-group">
-                                                            <h2>Nombre sucursal:</h2>
-                                                            <input type="text" class="form-control input-lg" name="nombre_suc" required="">
+                                                            <h2>Nombre empresa:</h2>
+                                                            <input type="text" class="form-control input-lg" name="nombre" required="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <h2>Correo Empresa:</h2>
+                                                            <input type="text" class="form-control input-lg" name="correo" required="">
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Estado:</h2>
@@ -163,13 +159,13 @@ if (!isset($_SESSION['correo'])) {
                                                             </select>
                                                         </div>
                                                         <div class="form-group">
-                                                            <h2>Empresa:</h2>
-                                                            <select class="form-control" aria-label="Default select example" name="fk_empresa">
+                                                            <h2>Pais:</h2>
+                                                            <select class="form-control" aria-label="Default select example" name="fk_pais">
                                                                 <?php
                                                                 include('../conec.php');
-                                                                    $consultaEmpresa = "SELECT * FROM empresa";
-                                                                    $resultadoEmpresa = mysqli_query($conexion, $consultaEmpresa);
-                                                                    while ($fila = mysqli_fetch_array($resultadoEmpresa)) {
+                                                                    $consultaPais = "SELECT * FROM pais";
+                                                                    $resultadoPais = mysqli_query($conexion, $consultaPais);
+                                                                    while ($fila = mysqli_fetch_array($resultadoPais)) {
                                                                 ?>
                                                             <option value="<?php echo $fila["id"] ?>"><?php echo $fila["nombre"] ?></option>
                                                         <?php } ?>
@@ -180,26 +176,13 @@ if (!isset($_SESSION['correo'])) {
                                                             <input type="text" class="form-control input-lg" name="direccion" required="">
                                                         </div>
                                                         <div class="form-group">
-                                                            <h2>Telefono:</h2>
-                                                            <input type="text" class="form-control input-lg" name="telefono" required="">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <h2>Responsable:</h2>
-                                                            <select  class="form-control" aria-label="Default select example" name="fk_responsable">
-                                                                <?php
-                                                                include('../conec.php');
-                                                                    $consultaResponsable= "SELECT * FROM usuario";
-                                                                    $resultadoResponsable = mysqli_query($conexion, $consultaResponsable);
-                                                                    while ($fila = mysqli_fetch_array($resultadoResponsable)) {
-                                                                ?>
-                                                            <option value="<?php echo $fila["clave_usuario"] ?>"><?php echo $fila["clave_usuario"] ?></option>
-                                                        <?php } ?>
-                                                            </select>
+                                                            <h2>RFC:</h2>
+                                                            <input type="text" class="form-control input-lg" name="RFC" required="">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                <input type="submit" name="Enviar" value="Editar Sucursal" class="btn btn-primary" />
+                                                <input type="submit" name="Enviar" value="Editar empresa" class="btn btn-primary" />
                                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                                                 </div>
                                             </form>
@@ -217,19 +200,23 @@ if (!isset($_SESSION['correo'])) {
     </div>
     </div>
     </div>
-<div class="modal fade" id="CrearSuc">
+<div class="modal fade" id="CrearEmp">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="../acciones/regSuc.php" method="POST">
+            <form action="acciones/regEmp.php" method="POST">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <h2>Nombre sucursal:</h2>
-                            <input type="text" class="form-control input-lg" name="nombre_suc" required="">
+                            <h2>Nombre empresa:</h2>
+                            <input type="text" class="form-control input-lg" name="nombre" required="">
+                        </div>
+                        <div class="form-group">
+                            <h2>Correo Empresa:</h2>
+                            <input type="text" class="form-control input-lg" name="correo" required="">
                         </div>
                         <div class="form-group">
                             <h2>Estado:</h2>
-                            <select class="form-control" aria-label="Default select example" name="fk_estado">
+                            <select class="form-select" aria-label="Default select example" name="fk_estado">
                                 <?php
                                 include('../conec.php');
                                     $consultaestados = "SELECT * FROM estados";
@@ -242,7 +229,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Municipio:</h2>
-                            <select class="form-control" aria-label="Default select example" name="fk_municipio">
+                            <select class="form-select" aria-label="Default select example" name="fk_municipio">
                                 <?php
                                 include('../conec.php');
                                     $consultaMunicipio = "SELECT * FROM municipio";
@@ -255,7 +242,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Ciudad:</h2>
-                            <select class="form-control" aria-label="Default select example" name="fk_ciudad">
+                            <select class="form-select" aria-label="Default select example" name="fk_ciudad">
                                 <?php
                                 include('../conec.php');
                                     $consultaCiudad = "SELECT * FROM ciudades";
@@ -267,13 +254,13 @@ if (!isset($_SESSION['correo'])) {
                             </select>
                         </div>
                         <div class="form-group">
-                            <h2>Empresa:</h2>
-                            <select class="form-control" aria-label="Default select example" name="fk_empresa">
+                            <h2>Pais:</h2>
+                            <select class="form-select" aria-label="Default select example" name="fk_pais">
                                 <?php
                                 include('../conec.php');
-                                    $consultaEmpresa = "SELECT * FROM empresa";
-                                    $resultadoEmpresa = mysqli_query($conexion, $consultaEmpresa);
-                                    while ($fila = mysqli_fetch_array($resultadoEmpresa)) {
+                                    $consultaPais = "SELECT * FROM pais";
+                                    $resultadoPais = mysqli_query($conexion, $consultaPais);
+                                    while ($fila = mysqli_fetch_array($resultadoPais)) {
                                 ?>
                             <option value="<?php echo $fila["id"] ?>"><?php echo $fila["nombre"] ?></option>
                         <?php } ?>
@@ -284,53 +271,19 @@ if (!isset($_SESSION['correo'])) {
                             <input type="text" class="form-control input-lg" name="direccion" required="">
                         </div>
                         <div class="form-group">
-                            <h2>Telefono:</h2>
-                            <input type="text" class="form-control input-lg" name="telefono" required="">
+                            <h2>RFC:</h2>
+                            <input type="text" class="form-control input-lg" name="RFC" required="">
                         </div>
-                        <div class="form-group">
-                            <h2>Responsable:</h2>
-                            <select class="form-control" aria-label="Default select example" name="fk_responsable">
-                                <?php
-                                include('../conec.php');
-                                    $consultaResponsable= "SELECT * FROM usuario";
-                                    $resultadoResponsable = mysqli_query($conexion, $consultaResponsable);
-                                    while ($fila = mysqli_fetch_array($resultadoResponsable)) {
-                                ?>
-                            <option value="<?php echo $fila["clave_usuario"] ?>"><?php echo $fila["clave_usuario"] ?></option>
-                        <?php } ?>
-                            </select>
-                        </div>
-                        
                     </div>
                 </div>
                 <div class="modal-footer">
-                <input type="submit" name="Enviar" value="Insertar sucursal" class="btn btn-primary" />
+                <input type="submit" name="Enviar" value="Insertar empresa" class="btn btn-primary" />
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script>
-        function eliminarSuc(id) {
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: 'Esta acción eliminará la sucursal seleccionada.',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'Eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Redireccionar a la página de eliminación del usuario
-                    window.location.href = '../acciones/eliminarSuc.php?id=' + id;
-                }
-            });
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
