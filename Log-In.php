@@ -46,10 +46,11 @@ include ('conec.php');
             header('Location: Usuario/usuario.php');
             
         }else if ($respuesta==1 && $rolUsuario == 3){
-            header('Location: ../Tutor.php');
+            header('Location: Empleado/ticket.php');
 
         }else if ($respuesta==1 && $rolUsuario == 4){
-            header('Location: ../Alumno.php');
+            header('Location: Gerente/usuarios.php');
+            
             
         }else{
             /* header('Location: ../Paginas/LogIn.php'); */

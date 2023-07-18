@@ -50,8 +50,8 @@ if (!isset($_SESSION['correo'])) {
         <div class="content-wrapper">
             <div class="content-header">
                 <div class="table-responsive">
-                    <div class="col-mb-6">
-                        <div class="col-9">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
                             <h1 class="m-0">Usuarios</h1>
                         </div>
                         <div class="box">
@@ -59,7 +59,7 @@ if (!isset($_SESSION['correo'])) {
                             <button class="btn btn-primary" data-toggle="modal" data-target="#CrearUser">Crear nuevo</button>
                         </div>
                             <br>
-                            <table class="table table-bordered table-hover table-striped table-condensed small-table" id="miTabla">
+                            <table class="table table-bordered table-hover table-striped table-condensed" id="miTabla">
                                 <thead>
                                     <tr>
                                         <th>Clave usuario</th>
@@ -73,22 +73,17 @@ if (!isset($_SESSION['correo'])) {
                                         <th>Puesto</th>
                                         <th>Sexo</th>
                                         <th>Sucursal</th>
-                                        <th>Estado</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     include('../conec.php');/*Conexión a la Base de Datos*/
-                                    $Consulta = "SELECT usuario.clave_usuario, usuario.nombre, usuario.Apaterno, usuario.Amaterno, usuario.telefono, usuario.correo,
-                                    departamento.nombre_dep AS fk_departamento, roles.rol AS fk_rol, puesto.nombre_puesto AS fk_puesto, 
-                                    sucursal.nombre_suc AS fk_sucursal, usuario.sexo, usuario.razon, usuario.activo  
-                                    FROM usuario 
-                                    INNER JOIN sucursal ON usuario.fk_sucursal = sucursal.id 
-                                    INNER JOIN puesto ON usuario.fk_puesto = puesto.id
+                                    $Consulta = "SELECT usuario.clave_usuario, usuario.nombre,usuario.Apaterno,usuario.Amaterno, usuario.telefono, usuario.correo, departamento.nombre_dep AS fk_departamento, 
+                                    roles.rol AS fk_rol, puesto.nombre_puesto AS fk_puesto, sucursal.nombre_suc AS fk_sucursal, usuario.sexo  
+                                    FROM usuario INNER JOIN sucursal ON usuario.fk_sucursal = sucursal.id INNER JOIN puesto ON usuario.fk_puesto = puesto.id
                                     INNER JOIN departamento ON usuario.fk_departamento = departamento.id 
-                                    INNER JOIN roles ON usuario.fk_rol = roles.id
-                                    WHERE usuario.activo = 1"; // Solo traer usuarios activos (activo = 1)
+                                    INNER JOIN roles ON usuario.fk_rol = roles.id";
 
                                     $resultado = mysqli_query($conexion, $Consulta);
                                     $contador = 1;
@@ -106,25 +101,19 @@ if (!isset($_SESSION['correo'])) {
                                             <td><?php echo $fila["fk_puesto"] ?></td>
                                             <td><?php echo $fila["sexo"] ?></td>
                                             <td><?php echo $fila["fk_sucursal"] ?></td>
-                                            <td><?php echo $fila["activo"] ?></td>
                                             <!--Boton Eliminar Usuarios-->
                                             <td>
                                                 <!-- Boton Eliminar Usuarios -->
                                                 <div class="d-flex">
                                             <button class="btn btn-success mr-2">
                                                 <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarUser<?php echo $contador ?>"></i>
-                                            </button> 
-                                            <button class="btn btn-danger">
-                                                <a onclick="eliminarUsuario('<?php echo $fila['clave_usuario'] ?>')">
-                                                    <i class="fas fa-trash text-white"></i>
-                                                </a>
-                                            </button>                                           
-                                        </td>
+                                            </button>
+                                            </td>
                                         </tr>
                                         <div class="modal fade" id="EditarUser<?php echo $contador ?>">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <form action="../acciones/editarusuario.php" method="POST">
+                                        <form action="acciones/editarusuario.php" method="POST">
                                             <div class="modal-body">
                                                 <h2>Editar Usuario</h2>
                                                 <div class="box-body">
@@ -217,7 +206,7 @@ if (!isset($_SESSION['correo'])) {
                                                 </div>
                                                     </div>
                                                     <div class="modal-footer">
-                                                    <input type="submit" name="Enviar" value="Editar ticket" class="btn btn-primary" />
+                                                    <input type="submit" name="Enviar" value="Editar Usuario" class="btn btn-primary" />
                                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                                                     </div>
                                                 </div>
@@ -241,7 +230,7 @@ if (!isset($_SESSION['correo'])) {
     <div class="modal-dialog">
         <div class="modal-content">
         <h2 class="titulito" style="text-align: center;">Crear Usuario</h2>
-            <form action="../acciones/regUsuario.php" method="POST">
+            <form action="acciones/regUsuario.php" method="POST">
                 <div class="modal-body">
                     <div class="box-body">
                     <div class="mb-3">
@@ -338,39 +327,6 @@ if (!isset($_SESSION['correo'])) {
         </div>
     </div>
 </div>
-<script>
-    function eliminarUsuario(claveUsuario) {
-        Swal.fire({
-            title: '¿Estás seguro?',
-            text: 'Esta acción eliminará el usuario seleccionado.',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar',
-            html: `
-                <form id="deleteForm">
-                    <textarea name="razon" rows="4" cols="50" placeholder="Ingrese la razón de la eliminación"></textarea>
-                </form>
-            `,
-            preConfirm: () => {
-                return {
-                    razon: document.querySelector('textarea[name="razon"]').value
-                };
-            }
-        }).then((result) => {
-            if (!result.isConfirmed) {
-                return; // Si el usuario cancela, no hacemos nada.
-            }
-
-            // Redireccionar a la página de eliminación del usuario
-            const razon = encodeURIComponent(result.value.razon);
-            window.location.href = `../acciones/eliminarusuario.php?clave_usuario=${claveUsuario}&razon=${razon}`;
-        });
-    }
-</script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <!--Script para el lenguaje en español e inicializacion de datatables-->

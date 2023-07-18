@@ -38,8 +38,8 @@ if (!isset($_SESSION['correo'])) {
     <link rel="stylesheet" href="../template/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="../template/plugins/summernote/summernote-bs4.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Marcas</title>
 </head>
 <body>
     <?php
@@ -54,77 +54,59 @@ if (!isset($_SESSION['correo'])) {
                     <div class="container">
                         <div class="col-mb-6">
                             <div class="col-9">
-                                <h1 class="m-2">Componentes</h1>
+                                <h1 class="m-2">Marcas</h1>
                             </div>
                             <div class="box">
                 <div class="box-header">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#CrearCompo">Crear nuevo</button>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#Crearmarca">Crear nuevo</button>
                 </div>
                 <br>
                     <table class="table table-bordered table-hover table-striped" id="miTabla" >
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Nombre</th>
-                                <th>Modelo</th>
-                                <th>Serie</th>
-                                <th>Acciones</th>
+                                <th style="text-align: center;">Nombre</th>
+                                <th style="text-align: center;">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             include('../conec.php');/*Conexión a la Base de Datos*/
-                            $Consulta = "SELECT * FROM componentes";
+                            $Consulta = "SELECT * FROM marca";
 
                             $resultado = mysqli_query($conexion, $Consulta);
                             $contador = 1;
                             while ($fila = mysqli_fetch_array($resultado)) {
                             ?>
                                 <tr>
-                                    <th scope="row"><?php echo $fila["id"] ?></th>
-                                    <td><?php echo $fila["nombre_componente"] ?></td>
-                                    <td><?php echo $fila["modelo"] ?></td>
-                                    <td><?php echo $fila["serie"] ?></td>
+                                    <th scope="row"><?php echo $fila["id_marca"] ?></th>
+                                    <td style="text-align: center;"><?php echo $fila["nombre"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
-                                <td>
-                                    <button class="btn btn-success" style="margin-left: 10%;">
-                                        <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarCompo<?php echo $contador ?>">
+                                    <td>
+                                    <button class="btn btn-success" style="margin-left: 20%;">
+                                        <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#Editarmarca<?php echo $contador ?>">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger">
-                                        <a onclick="eliminarCompo('<?php echo $fila['id'] ?>')">
-                                            <i class="fas fa-trash text-white"></i>
-                                        </a>
-                                    </button>
-                                </td>
+                            </td>
                                 </tr>
-                                <div class="modal fade" id="EditarCompo<?php echo $contador ?>">
-                                    <div class="modal-dialog">
+                                <div class="modal fade" id="Editarmarca<?php echo $contador ?>">
+                                    <div class="modal-dialog">Editar Marca
                                         <div class="modal-content">
-                                            <form action="../acciones/editarCompo.php" method="POST">
+                                            <form action="acciones/editarMarca.php" method="POST">
                                                 <div class="modal-body">
-                                                    <h2>Editar Componente</h2>
                                                     <div class="box-body">
-                                                    <div class="form-group">
+                                                        <div class="form-group">
                                                             <h2>ID:</h2>
-                                                            <input type="text" class="form-control input-lg" name="id" value="<?php echo $contador ?>">
+                                                            <input type="text" class="form-control input-lg" name="id_marca"  value="<?php echo $contador ?>" readonly>
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Nombre:</h2>
-                                                            <input type="text" class="form-control input-lg" name="nombre_componente">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <h2>Modelo:</h2>
-                                                            <input type="text" class="form-control input-lg" name="modelo" required="">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <h2>Serie:</h2>
-                                                            <input type="text" class="form-control input-lg" name="serie" required="">
+                                                            <input type="text" class="form-control input-lg" name="nombre" required="">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                <input type="submit" name="Enviar" value="Editar componente" class="btn btn-primary" />
+                                                <input type="submit" name="Enviar" value="Editar marca" class="btn btn-primary" />
                                                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                                                 </div>
                                             </form>
@@ -143,55 +125,26 @@ if (!isset($_SESSION['correo'])) {
     </div>
     </div>
     </div>
-<div class="modal fade" id="CrearCompo">
+<div class="modal fade" id="Crearmarca">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="../acciones/regCompo.php" method="POST">
+            <form action="acciones/regMarca.php" method="POST">
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
-                            <h2>Nombre:</h2>
-                            <input type="text" class="form-control input-lg" name="nombre_componente" required="">
-                        </div>
-                        <div class="form-group">
-                            <h2>Modelo:</h2>
-                            <input type="text" class="form-control input-lg" name="modelo" required="">
-                        </div>
-                        <div class="form-group">
-                            <h2>Serie:</h2>
-                            <input type="text" class="form-control input-lg" name="serie" required="">
+                            <h2>Nombre marca:</h2>
+                            <input type="text" class="form-control input-lg" name="nombre" required="">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                <input type="submit" name="Enviar" value="Insertar componente" class="btn btn-primary" />
+                <input type="submit" name="Enviar" value="Insertar marca" class="btn btn-primary" />
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<script>
-function eliminarCompo(id) {
-Swal.fire({
-title: '¿Estás seguro?',
-text: 'Esta acción eliminará el componente seleccionado.',
-icon: 'warning',
-showCancelButton: true,
-confirmButtonColor: '#d33',
-cancelButtonColor: '#3085d6',
-confirmButtonText: 'Eliminar',
-cancelButtonText: 'Cancelar'
-}).then((result) => {
-if (result.isConfirmed) {
-// Redireccionar a la página de eliminación del usuario
-window.location.href = '../acciones/eliminarCompo.php?id=' + id;
-}
-});
-}
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>

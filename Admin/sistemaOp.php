@@ -83,11 +83,15 @@ if (!isset($_SESSION['correo'])) {
                                     <td><?php echo $fila["nombre_so"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
                                 <td>
-                                    <button class="btn btn-success" style="margin-left: 20%;">
+                                    <button class="btn btn-success" >
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#Editarso<?php echo $contador ?>">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger" style="margin-left: 30%;"><a target="_self" href="../acciones/eliminarSO.php?id=<?php echo $fila['id'] ?>"><i class="fas fa-trash text-white"></i></a></button>
+                                    <button class="btn btn-danger">
+                                                <a onclick="eliminarSis('<?php echo $fila['id'] ?>')">
+                                                    <i class="fas fa-trash text-white"></i>
+                                                </a>
+                                    </button>
                                 </td>
                                 </tr>
                                 <div class="modal fade" id="Editarso<?php echo $contador ?>">
@@ -147,6 +151,26 @@ if (!isset($_SESSION['correo'])) {
         </div>
     </div>
 </div>
+<script>
+        function eliminarSis(sisOp) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: 'Esta acción eliminará el sistema seleccionado.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redireccionar a la página de eliminación del usuario
+                    window.location.href = '../acciones/eliminarSO.php?id=' + sisOp;
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
