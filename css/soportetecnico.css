@@ -247,13 +247,30 @@ nav ul {
     font-family: 'Montserrat', sans-serif;
 }
 
+main{
+font-family: 'Montserrat', sans-serif;
+display: grid;
+grid-template-columns: auto auto auto;
+gap: 30px;
+font-size: 1.2rem;
+text-align: center;
+margin: 10px;
+padding: 30px;
+color: #100d6a;
+}
+
 .contenedor-st .comentario p{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: #100d6a;
+    color: #ffffff;
     margin-top: 15px;
+    background-color: #3456c7;
+    padding: 20px;
+    border-radius: 20px;
+    font-style:oblique;
+    box-shadow: 10px 10px 10px 5px rgba(153, 153, 153, 0.73);
 }
 
 /*--------------------------------- FOOTER ---------------------------------*/
