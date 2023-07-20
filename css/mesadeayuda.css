@@ -215,7 +215,13 @@ nav ul {
     padding: 20px;
     margin-bottom: 15px;
 }
-
+.container3 p{
+    color: #ffffff;
+}
+.tituloContent2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
 .descripcion-mda{
     width: 100%;
     display: grid;
