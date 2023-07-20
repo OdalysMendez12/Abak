@@ -79,7 +79,13 @@ if (isset($_POST['Enviar'])) {
             echo '<script>alert("Los datos no se insertaron en la tabla tickets.");</script>';
         } else {
             // Obtener la clave del ticket recién insertado
+            $query = "SELECT MAX(id) AS ultimo_id FROM expediente";
+        $resultado2 = mysqli_query($conexion, $query);
+        $fila2 = mysqli_fetch_assoc($resultado2);
+        $ultimoId = $fila2['ultimo_id'];
 
+        // Calcular el siguiente ID
+        $siguienteId = $ultimoId + 1;
             // Insertar en la tabla "expediente"
             $insertarExpediente = "INSERT INTO expediente (id,fk_clave_ticket, fk_clave_equipo, fk_clave_usuario)
                 VALUES ('$siguienteId','$codigo', '$equipo', '$usuario')";
@@ -99,4 +105,5 @@ if (isset($_POST['Enviar'])) {
 
 header("Location: ../ticket.php");
 ?>
+
 

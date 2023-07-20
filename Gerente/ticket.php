@@ -139,7 +139,7 @@ if (!isset($_SESSION['correo'])) {
                                                     <div class="box-body">
                                                         <div class="form-group">
                                                             <h2 class="form-label">Clave Ticket:</h2>
-                                                            <input type="text" class="form-control input-lg" name="clave_ticket" value="<?php echo $fila['clave_ticket'] ?>">                        
+                                                            <input type="text" class="form-control input-lg" name="clave_ticket" value="<?php echo $fila['clave_ticket'] ?>" readonly>                        
                                                         </div>
                                                         <h2 class="form-label">Estatus:</h2>
                                                         <select class="form-control input-lg" aria-label="Default select example" name="fk_estatus">
@@ -154,11 +154,11 @@ if (!isset($_SESSION['correo'])) {
                                                         </select>
                                                         <div class="form-group">
                                                             <h2>Empleado:</h2>
-                                                            <input type="text" class="form-control input-lg" name="fk_clave_empleado" required="" value="<?php echo $_SESSION['clave_usuario']; ?>" readonly>
+                                                            <input type="text" class="form-control input-lg" name="fk_clave_empleado" value="<?php echo $_SESSION['clave_usuario']; ?>" readonly>
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Solución:</h2>
-                                                            <input type="text" class="form-control input-lg" name="solucion" required="">
+                                                            <input type="text" class="form-control input-lg" name="solucion" >
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Tipo de Mantenimiento:</h2>
@@ -171,13 +171,11 @@ if (!isset($_SESSION['correo'])) {
                                                             <h2>Descripción del Mantenimiento:</h2>
                                                             <textarea class="form-control input-lg" name="dec_mantenimiento" rows="4"></textarea>
                                                         </div>
-                                                        <div class="col-lg-6">
                                                             <fieldset class="form-group">
                                                                 <label class="form-label semibold">Fecha</label>
                                                                 <?php date_default_timezone_set('America/Cancun'); ?>
                                                                 <input type="text" name="fecha_fin" class="form-control" value="<?php echo date('Y-m-d H:i:s'); ?>" readonly>
                                                             </fieldset>
-                                                        </div>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <input type="submit" name="Enviar" value="Editar ticket" class="btn btn-primary" />

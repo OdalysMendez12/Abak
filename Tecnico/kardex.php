@@ -4,7 +4,7 @@ session_start();
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['correo'])) {
-    header('Location: login.php');
+    header('Location: ../i_sesion.php');
     exit;
 }
 ?>
@@ -13,8 +13,6 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -64,7 +62,7 @@ if (!isset($_SESSION['correo'])) {
                     <div class="box">
                         <br>
                             <!-- Resto del contenido -->
-                            <table class="table table-bordered table-hover table-striped" id="miTabla">
+                            <table class="table-sm table-bordered table-hover table-striped" id="miTabla">
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -74,19 +72,21 @@ if (!isset($_SESSION['correo'])) {
                                         <th>Empleado</th>
                                         <th>Tipo mantenimiento</th>
                                         <th>Descripción de mantenimiento</th>
-                                        <th>Fecha Inicio</th>
-                                        <th>Fecha Fin</th>
+                                        <th>Fecha Reporte</th>
+                                        <th>Fecha Atencion</th>
+                                        <th>Fecha fin atencion</th>
+                                        <th>Tiempo de atencion</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     include('../conec.php');
                                     $consulta = "SELECT expediente.id, usuario.clave_usuario AS fk_clave_usuario, catalogo_equipo.clave_equipo AS fk_clave_equipo, tickets.clave_ticket AS fk_clave_ticket,
-                                    expediente.fk_clave_empleado, expediente.tipo_mantenimiento, expediente.dec_mantenimiento, expediente.fecha_inicio, expediente.fecha_fin FROM expediente
+                                    expediente.fk_clave_empleado, expediente.tipo_mantenimiento, expediente.dec_mantenimiento, expediente.fecha_reporte, expediente.fecha_inicio_atencion, 
+                                    expediente.fecha_fin_atencion, expediente.tiempo_atencion FROM expediente
                                     LEFT JOIN usuario ON expediente.fk_clave_usuario = usuario.clave_usuario
                                     LEFT JOIN tickets ON expediente.fk_clave_ticket = tickets.clave_ticket
                                     LEFT JOIN catalogo_equipo ON expediente.fk_clave_equipo = catalogo_equipo.clave_equipo";
-
                                     $resultado = mysqli_query($conexion, $consulta);
                                     $contador = 1;
                                     while ($fila = mysqli_fetch_array($resultado)) {
@@ -99,8 +99,10 @@ if (!isset($_SESSION['correo'])) {
                                             <td><?php echo $fila["fk_clave_empleado"] ?></td>
                                             <td><?php echo $fila["tipo_mantenimiento"] ?></td>
                                             <td><?php echo $fila["dec_mantenimiento"] ?></td>
-                                            <td><?php echo $fila["fecha_inicio"] ?></td>
-                                            <td><?php echo $fila["fecha_fin"] ?></td>
+                                            <td><?php echo $fila["fecha_reporte"] ?></td>
+                                            <td><?php echo $fila["fecha_inicio_atencion"] ?></td>
+                                            <td><?php echo $fila["fecha_fin_atencion"] ?></td>
+                                            <td><?php echo $fila["tiempo_atencion"] ?></td>
                                         </tr>
                                         <?php
                                         $contador++;
