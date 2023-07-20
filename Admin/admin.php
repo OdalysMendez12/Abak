@@ -15,7 +15,7 @@ if (!isset($_SESSION['correo'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ABAK SOLUCIONES</title>
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <!--datatables boostrap-->
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables bootstrap responsive-->
@@ -55,9 +55,9 @@ if (!isset($_SESSION['correo'])) {
                             <h1 class="m-0">Usuarios</h1>
                         </div>
                         <div class="box">
-                        <div class="box-header">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#CrearUser">Crear nuevo</button>
-                        </div>
+                            <div class="box-header">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#CrearUser">Crear nuevo</button>
+                            </div>
                             <br>
                             <table class="table table-bordered table-hover table-striped table-condensed small-table" id="miTabla">
                                 <thead>
@@ -111,124 +111,124 @@ if (!isset($_SESSION['correo'])) {
                                             <td>
                                                 <!-- Boton Eliminar Usuarios -->
                                                 <div class="d-flex">
-                                            <button class="btn btn-success mr-2">
-                                                <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarUser<?php echo $contador ?>"></i>
-                                            </button> 
-                                            <button class="btn btn-danger">
-                                                <a onclick="eliminarUsuario('<?php echo $fila['clave_usuario'] ?>')">
-                                                    <i class="fas fa-trash text-white"></i>
-                                                </a>
-                                            </button>                                           
-                                        </td>
+                                                    <button class="btn btn-success mr-2">
+                                                        <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarUser<?php echo $contador ?>"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger">
+                                                        <a onclick="eliminarUsuario('<?php echo $fila['clave_usuario'] ?>')">
+                                                            <i class="fas fa-trash text-white"></i>
+                                                        </a>
+                                                    </button>
+                                            </td>
                                         </tr>
                                         <div class="modal fade" id="EditarUser<?php echo $contador ?>">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <form action="../acciones/editarusuario.php" method="POST">
-                                            <div class="modal-body">
-                                                <h2>Editar Usuario</h2>
-                                                <div class="box-body">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Clave Usuario:</label>
-                                                    <input type="text" class="form-control" name="clave_usuario" value="<?php echo $fila['clave_usuario'] ?>" readonly>
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <form action="../acciones/editarusuario.php" method="POST">
+                                                        <div class="modal-body">
+                                                            <h2>Editar Usuario</h2>
+                                                            <div class="box-body">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Clave Usuario:</label>
+                                                                    <input type="text" class="form-control" name="clave_usuario" value="<?php echo $fila['clave_usuario'] ?>" readonly>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el nombre:</label>
+                                                                    <input type="text" class="form-control" name="nombre" />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el apellido paterno:</label>
+                                                                    <input type="text" class="form-control" name="Apaterno" />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el apellido materno:</label>
+                                                                    <input type="text" class="form-control" name="Amaterno" />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el número de teléfono:</label>
+                                                                    <input type="number" class="form-control" name="telefono" required />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el correo electrónico:</label>
+                                                                    <input type="email" class="form-control" name="correo" />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita la contraseña:</label>
+                                                                    <input type="password" class="form-control" name="contrasena" />
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el departamento:</label>
+                                                                    <select class="form-control" aria-label="Default select example" name="fk_departamento">
+                                                                        <?php
+                                                                        include('conec.php');
+                                                                        $consulta2 = "SELECT * FROM departamento";
+                                                                        $resultado2 = mysqli_query($conexion, $consulta2);
+                                                                        while ($fila2 = mysqli_fetch_array($resultado2)) {
+                                                                        ?>
+                                                                            <option value="<?php echo $fila2["id"] ?>"><?php echo $fila2["nombre_dep"] ?></option>
+                                                                        <?php } ?>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el rol:</label>
+                                                                    <select class="form-control" aria-label="Default select example" name="fk_rol">
+                                                                        <?php
+                                                                        include('conec.php');
+                                                                        $consulta_rol = "SELECT * FROM roles";
+                                                                        $resultado_rol = mysqli_query($conexion, $consulta_rol);
+                                                                        while ($fila_rol = mysqli_fetch_array($resultado_rol)) {
+                                                                        ?>
+                                                                            <option value="<?php echo $fila_rol["id"] ?>"><?php echo $fila_rol["rol"] ?></option>
+                                                                        <?php } ?>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el puesto:</label>
+                                                                    <select class="form-control" aria-label="Default select example" name="fk_puesto">
+                                                                        <?php
+                                                                        include('conec.php');
+                                                                        $consulta3 = "SELECT * FROM puesto";
+                                                                        $resultado3 = mysqli_query($conexion, $consulta3);
+                                                                        while ($fila3 = mysqli_fetch_array($resultado3)) {
+                                                                        ?>
+                                                                            <option value="<?php echo $fila3["id"] ?>"><?php echo $fila3["nombre_puesto"] ?></option>
+                                                                        <?php } ?>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita el sexo del usuario:</label>
+                                                                    <select class="form-control" aria-label="Default select example" name="sexo">
+                                                                        <option value="Masculino">Masculino</option>
+                                                                        <option value="Femenino">Femenino</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Edita la sucursal a la que pertenece el usuario:</label>
+                                                                    <select class="form-control" aria-label="Default select example" name="fk_sucursal">
+                                                                        <?php
+                                                                        include('conec.php');
+                                                                        $consulta4 = "SELECT * FROM sucursal";
+                                                                        $resultado4 = mysqli_query($conexion, $consulta4);
+                                                                        while ($fila4 = mysqli_fetch_array($resultado4)) {
+                                                                        ?>
+                                                                            <option value="<?php echo $fila4["id"] ?>"><?php echo $fila4["nombre_suc"] ?></option>
+                                                                        <?php } ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <input type="submit" name="Enviar" value="Editar usuario" class="btn btn-primary" />
+                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                                            </div>
+                                                        </div>
                                                 </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el nombre:</label>
-                                                    <input type="text" class="form-control" name="nombre"/>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el apellido paterno:</label>
-                                                    <input type="text" class="form-control" name="Apaterno" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el apellido materno:</label>
-                                                    <input type="text" class="form-control" name="Amaterno" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el número de teléfono:</label>
-                                                    <input type="number" class="form-control" name="telefono" required />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el correo electrónico:</label>
-                                                    <input type="email" class="form-control" name="correo" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita la contraseña:</label>
-                                                    <input type="password" class="form-control" name="contrasena" />
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el departamento:</label>
-                                                    <select class="form-control" aria-label="Default select example" name="fk_departamento">
-                                                        <?php
-                                                        include('conec.php');
-                                                        $consulta2 = "SELECT * FROM departamento";
-                                                        $resultado2 = mysqli_query($conexion, $consulta2);
-                                                        while ($fila2 = mysqli_fetch_array($resultado2)) {
-                                                            ?>
-                                                            <option value="<?php echo $fila2["id"] ?>"><?php echo $fila2["nombre_dep"] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el rol:</label>
-                                                    <select class="form-control" aria-label="Default select example" name="fk_rol">
-                                                        <?php
-                                                        include('conec.php');
-                                                        $consulta_rol = "SELECT * FROM roles";
-                                                        $resultado_rol = mysqli_query($conexion, $consulta_rol);
-                                                        while ($fila_rol = mysqli_fetch_array($resultado_rol)) {
-                                                            ?>
-                                                            <option value="<?php echo $fila_rol["id"] ?>"><?php echo $fila_rol["rol"] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el puesto:</label>
-                                                    <select class="form-control" aria-label="Default select example" name="fk_puesto">
-                                                        <?php
-                                                        include('conec.php');
-                                                        $consulta3 = "SELECT * FROM puesto";
-                                                        $resultado3 = mysqli_query($conexion, $consulta3);
-                                                        while ($fila3 = mysqli_fetch_array($resultado3)) {
-                                                            ?>
-                                                            <option value="<?php echo $fila3["id"] ?>"><?php echo $fila3["nombre_puesto"] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita el sexo del usuario:</label>
-                                                    <select class="form-control" aria-label="Default select example" name="sexo">
-                                                        <option value="Masculino">Masculino</option>
-                                                        <option value="Femenino">Femenino</option>
-                                                    </select>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label class="form-label">Edita la sucursal a la que pertenece el usuario:</label>
-                                                    <select class="form-control" aria-label="Default select example" name="fk_sucursal">
-                                                        <?php
-                                                        include('conec.php');
-                                                        $consulta4 = "SELECT * FROM sucursal";
-                                                        $resultado4 = mysqli_query($conexion, $consulta4);
-                                                        while ($fila4 = mysqli_fetch_array($resultado4)) {
-                                                            ?>
-                                                            <option value="<?php echo $fila4["id"] ?>"><?php echo $fila4["nombre_suc"] ?></option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                    <input type="submit" name="Enviar" value="Editar ticket" class="btn btn-primary" />
-                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                                    </div>
-                                                </div>
+                                                </form>
                                             </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                    <?php 
-                                    $contador++;
-                                } 
-                                ?>
+                                        </div>
+                                    <?php
+                                        $contador++;
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -238,13 +238,13 @@ if (!isset($_SESSION['correo'])) {
         </div>
     </div>
     <div class="modal fade" id="CrearUser">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <h2 class="titulito" style="text-align: center;">Crear Usuario</h2>
-            <form action="../acciones/regUsuario.php" method="POST">
-                <div class="modal-body">
-                    <div class="box-body">
-                    <div class="mb-3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h2 class="titulito" style="text-align: center;">Crear Usuario</h2>
+                <form action="../acciones/regUsuario.php" method="POST">
+                    <div class="modal-body">
+                        <div class="box-body">
+                            <div class="mb-3">
                                 <label class="form-label">Ingresa la clave del usuario:</label>
                                 <input type="text" class="form-control" id="codigo" name="clave_usuario" placeholder="No es necesario agregar un codigo" readonly />
                             </div>
@@ -271,105 +271,106 @@ if (!isset($_SESSION['correo'])) {
                                             <div class="mb-3">
                                                 <label class="form-label">Ingresa el departamento:</label>
                                                 <select class="form-control" aria-label="Default select example" name="fk_departamento">
-                                                <?php
+                                                    <?php
                                                     include('conec.php');
                                                     $consulta2 = "SELECT * FROM departamento";
                                                     $resultado2 = mysqli_query($conexion, $consulta2);
                                                     while ($fila2 = mysqli_fetch_array($resultado2)) {
                                                     ?>
-                                                    <option value="<?php echo $fila2["id"] ?>"><?php echo $fila2["nombre_dep"] ?></option>
+                                                        <option value="<?php echo $fila2["id"] ?>"><?php echo $fila2["nombre_dep"] ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Ingresa el rol:</label>
                                                 <select class="form-control" aria-label="Default select example" name="fk_rol">
-                                                <?php
+                                                    <?php
                                                     include('conec.php');
                                                     $consulta = "SELECT * FROM roles";
                                                     $resultado = mysqli_query($conexion, $consulta);
                                                     while ($fila = mysqli_fetch_array($resultado)) {
                                                     ?>
-                                                    <option value="<?php echo $fila["id"] ?>"><?php echo $fila["rol"] ?></option>
+                                                        <option value="<?php echo $fila["id"] ?>"><?php echo $fila["rol"] ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Ingresa el puesto:</label>
                                                 <select class="form-control" aria-label="Default select example" name="fk_puesto">
-                                                <?php
+                                                    <?php
                                                     include('conec.php');
                                                     $consulta3 = "SELECT * FROM puesto";
                                                     $resultado3 = mysqli_query($conexion, $consulta3);
                                                     while ($fila3 = mysqli_fetch_array($resultado3)) {
                                                     ?>
-                                                    <option value="<?php echo $fila3["id"] ?>"><?php echo $fila3["nombre_puesto"] ?></option>
+                                                        <option value="<?php echo $fila3["id"] ?>"><?php echo $fila3["nombre_puesto"] ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Ingresa el sexo del usuario:</label>
                                                 <select class="form-control" aria-label="Default select example" name="sexo">
-                                                <option value="Masculino">Masculino</option>
-                                                <option value="Femenino">Femenino</option>
+                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label class="form-label">Ingresa la sucursal a la que pertenece el usuario:</label>
                                                 <select class="form-control" aria-label="Default select example" name="fk_sucursal">
-                                                <?php
+                                                    <?php
                                                     include('conec.php');
                                                     $consulta4 = "SELECT * FROM sucursal";
                                                     $resultado4 = mysqli_query($conexion, $consulta4);
                                                     while ($fila4 = mysqli_fetch_array($resultado4)) {
                                                     ?>
-                                                    <option value="<?php echo $fila4["id"] ?>"><?php echo $fila4["nombre_suc"] ?></option>
+                                                        <option value="<?php echo $fila4["id"] ?>"><?php echo $fila4["nombre_suc"] ?></option>
                                                     <?php } ?>
                                                 </select>
                                             </div>
-                        
-                    </div>
-                </div>
-                <div class="modal-footer">
-                <input type="submit" name="Enviar" value="Insertar Usuario" class="btn btn-primary" />
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                </div>
-            </form>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="submit" name="Enviar" value="Insertar Usuario" class="btn btn-primary" />
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<script>
-    function eliminarUsuario(claveUsuario) {
-        Swal.fire({
-            title: '¿Estás seguro?',
-            text: 'Esta acción eliminará el usuario seleccionado.',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Cancelar',
-            html: `
+
+    <script>
+        function eliminarUsuario(claveUsuario) {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: 'Esta acción eliminará el usuario seleccionado.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+                html: `
                 <form id="deleteForm">
                     <textarea name="razon" rows="4" cols="50" placeholder="Ingrese la razón de la eliminación"></textarea>
                 </form>
             `,
-            preConfirm: () => {
-                return {
-                    razon: document.querySelector('textarea[name="razon"]').value
-                };
-            }
-        }).then((result) => {
-            if (!result.isConfirmed) {
-                return; // Si el usuario cancela, no hacemos nada.
-            }
+                preConfirm: () => {
+                    return {
+                        razon: document.querySelector('textarea[name="razon"]').value
+                    };
+                }
+            }).then((result) => {
+                if (!result.isConfirmed) {
+                    return; // Si el usuario cancela, no hacemos nada.
+                }
 
-            // Redireccionar a la página de eliminación del usuario
-            const razon = encodeURIComponent(result.value.razon);
-            window.location.href = `../acciones/eliminarusuario.php?clave_usuario=${claveUsuario}&razon=${razon}`;
-        });
-    }
-</script>
+                // Redireccionar a la página de eliminación del usuario
+                const razon = encodeURIComponent(result.value.razon);
+                window.location.href = `../acciones/eliminarusuario.php?clave_usuario=${claveUsuario}&razon=${razon}`;
+            });
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>

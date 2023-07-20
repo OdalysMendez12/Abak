@@ -38,6 +38,8 @@ if (!isset($_SESSION['correo'])) {
     <link rel="stylesheet" href="../template/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="../template/plugins/summernote/summernote-bs4.min.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
     <title>Sistemas Operativos</title>
 </head>
@@ -64,9 +66,9 @@ if (!isset($_SESSION['correo'])) {
                     <table class="table table-bordered table-hover table-striped" id="miTabla" >
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Nombre</th>
-                                <th>Acciones</th>
+                                <th style="text-align: center;">#</th>
+                                <th style="text-align: center;">Nombre</th>
+                                <th style="text-align: center;">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,10 +81,10 @@ if (!isset($_SESSION['correo'])) {
                             while ($fila = mysqli_fetch_array($resultado)) {
                             ?>
                                 <tr>
-                                    <th scope="row"><?php echo $fila["id"] ?></th>
-                                    <td><?php echo $fila["nombre_so"] ?></td>
+                                    <th style="text-align: center;" scope="row"><?php echo $fila["id"] ?></th>
+                                    <td style="text-align: center;"><?php echo $fila["nombre_so"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
-                                <td>
+                                <td style="text-align: center;">
                                     <button class="btn btn-success" >
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#Editarso<?php echo $contador ?>">
                                         </i>

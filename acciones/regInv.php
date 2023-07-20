@@ -81,7 +81,7 @@ if (isset($_POST['Enviar'])) {
         if (!$resultado) {
             echo '<script>alert("Los datos no se insertaron.");</script>';
         } else {
-            header('Location: ../Admin/inventario_sucursal.php');
+            header('Location: ../Admin/inventario.php');
         }
     }
 }

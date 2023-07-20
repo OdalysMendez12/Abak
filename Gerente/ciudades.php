@@ -12,6 +12,8 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -91,7 +93,7 @@ if (!isset($_SESSION['correo'])) {
                                     <td style="text-align: center;"><?php echo $fila["fk_pais"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
                                 <td>
-                                    <button class="btn btn-success" style="margin-left: 10%;">
+                                    <button class="btn btn-success" >
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarCiu<?php echo $contador ?>"">
                                         </i>
                                     </button>
@@ -107,7 +109,7 @@ if (!isset($_SESSION['correo'])) {
                                                         <div class="form-group">
                                                             <h2>ID:</h2>
                                                             
-                                                            <input type="text" class="form-control input-lg" name="id" required="" value="<?php echo $contador ?>">
+                                                            <input type="text" class="form-control input-lg" name="id" required="" value="<?php echo $contador ?>" readonly>
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Nombre:</h2>
@@ -115,7 +117,7 @@ if (!isset($_SESSION['correo'])) {
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Estado:</h2>
-                                                            <select class="form-select" aria-label="" name="fk_estado">
+                                                            <select class="form-control" aria-label="" name="fk_estado">
                                                                 <?php
                                                                 include('../conec.php');
                                                                     $consultaestados = "SELECT * FROM estados";
@@ -128,7 +130,7 @@ if (!isset($_SESSION['correo'])) {
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Municipio:</h2>
-                                                            <select class="form-select" aria-label="" name="fk_municipio">
+                                                            <select class="form-control" aria-label="" name="fk_municipio">
                                                                 <?php
                                                                 include('../conec.php');
                                                                     $consultaMuni = "SELECT * FROM municipio";
@@ -141,7 +143,7 @@ if (!isset($_SESSION['correo'])) {
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Pais:</h2>
-                                                            <select class="form-select" aria-label="" name="fk_pais">
+                                                            <select class="form-control" aria-label="" name="fk_pais">
                                                                 <?php
                                                                 include('../conec.php');
                                                                     $consultaPai = "SELECT * FROM municipio";
@@ -186,7 +188,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Estado</h2>
-                            <select class="form-select" aria-label="" name="fk_estado">
+                            <select class="form-control" aria-label="" name="fk_estado">
                                 <?php
                                 include('../conec.php');
                                     $consultaestados = "SELECT * FROM estados";
@@ -199,7 +201,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Municipio:</h2>
-                            <select class="form-select" aria-label="" name="fk_municipio">
+                            <select class="form-control" aria-label="" name="fk_municipio">
                                 <?php
                                 include('../conec.php');
                                     $consultaMuni = "SELECT * FROM municipio";
@@ -212,7 +214,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Pais:</h2>
-                            <select class="form-select" aria-label="" name="fk_pais">
+                            <select class="form-control" aria-label="" name="fk_pais">
                                 <?php
                                 include('../conec.php');
                                     $consultaPai = "SELECT * FROM municipio";

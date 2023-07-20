@@ -15,6 +15,8 @@ if (!isset($_SESSION['correo'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -44,10 +46,10 @@ if (!isset($_SESSION['correo'])) {
     <!-- ESTILO FORMULARIO NUEVO TICKET-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Información</title>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed>
+<body class="hold-transition sidebar-mini layout-fixed">
     <?php
     include ('../conec.php');
     ?>

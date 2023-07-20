@@ -12,6 +12,7 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icontrol
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -216,7 +217,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Estado:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_estado">
+                            <select class="form-control" aria-label="Default select example" name="fk_estado">
                                 <?php
                                 include('../conec.php');
                                     $consultaestados = "SELECT * FROM estados";
@@ -229,7 +230,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Municipio:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_municipio">
+                            <select class="form-control" aria-label="Default select example" name="fk_municipio">
                                 <?php
                                 include('../conec.php');
                                     $consultaMunicipio = "SELECT * FROM municipio";
@@ -242,7 +243,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Ciudad:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_ciudad">
+                            <select class="form-control" aria-label="Default select example" name="fk_ciudad">
                                 <?php
                                 include('../conec.php');
                                     $consultaCiudad = "SELECT * FROM ciudades";
@@ -255,7 +256,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Pais:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_pais">
+                            <select class="form-control" aria-label="Default select example" name="fk_pais">
                                 <?php
                                 include('../conec.php');
                                     $consultaPais = "SELECT * FROM pais";

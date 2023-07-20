@@ -38,6 +38,8 @@ if (!isset($_SESSION['correo'])) {
     <link rel="stylesheet" href="../template/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="../template/plugins/summernote/summernote-bs4.min.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <title>Sucursales</title>
 </head>
 <body>
@@ -96,8 +98,8 @@ if (!isset($_SESSION['correo'])) {
                                     <td><?php echo $fila["telefono"] ?></td>
                                     <td><?php echo $fila["fk_responsable"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
-                                <td>
-                                    <button class="btn btn-success" style="margin-left: 0%;">
+                                <td style="text-align: center;">
+                                    <button class="btn btn-success">
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarSuc<?php echo $contador ?>">
                                         </i>
                                     </button>

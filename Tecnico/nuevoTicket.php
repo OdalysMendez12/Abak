@@ -5,7 +5,7 @@ session_start();
 
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['correo'])) {
-    header('Location: login.php');
+    header('Location: ../i_sesion.php');
     exit;
 }
 ?>
@@ -13,6 +13,8 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->

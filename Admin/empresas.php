@@ -12,6 +12,7 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -93,12 +94,12 @@ if (!isset($_SESSION['correo'])) {
                                     <td><?php echo $fila["direccion"] ?></td>
                                     <td><?php echo $fila["RFC"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
-                                <td>
-                                    <button class="btn btn-success" style="margin-left: 0%;">
+                                <td style="text-align: center;">
+                                    <button class="btn btn-success">
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarEmp<?php echo $contador ?>">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger" style="margin-left: 1%;"><a target="_self" href="../acciones/eliminarEmp.php?id=<?php echo $fila['id'] ?>"><i class="fas fa-trash text-white"></i></a></button>
+                                    <button class="btn btn-danger"><a target="_self" href="../acciones/eliminarEmp.php?id=<?php echo $fila['id'] ?>"><i class="fas fa-trash text-white"></i></a></button>
                                 </td>
                                 </tr>
                                 <div class="modal fade" id="EditarEmp<?php echo $contador ?>">
@@ -110,7 +111,7 @@ if (!isset($_SESSION['correo'])) {
                                                     <div class="box-body">
                                                         <div class="form-group">
                                                             <h2>ID:</h2>
-                                                            <input class="form-control" type="text" name="id" value="<?php echo $contador ?>" /> 
+                                                            <input class="form-control" type="text" name="id" value="<?php echo $contador ?>" readonly/> 
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Nombre empresa:</h2>
@@ -217,7 +218,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Estado:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_estado">
+                            <select class="form-control" aria-label="Default select example" name="fk_estado">
                                 <?php
                                 include('../conec.php');
                                     $consultaestados = "SELECT * FROM estados";
@@ -230,7 +231,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Municipio:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_municipio">
+                            <select class="form-control" aria-label="Default select example" name="fk_municipio">
                                 <?php
                                 include('../conec.php');
                                     $consultaMunicipio = "SELECT * FROM municipio";
@@ -243,7 +244,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Ciudad:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_ciudad">
+                            <select class="form-control" aria-label="Default select example" name="fk_ciudad">
                                 <?php
                                 include('../conec.php');
                                     $consultaCiudad = "SELECT * FROM ciudades";
@@ -256,7 +257,7 @@ if (!isset($_SESSION['correo'])) {
                         </div>
                         <div class="form-group">
                             <h2>Pais:</h2>
-                            <select class="form-select" aria-label="Default select example" name="fk_pais">
+                            <select class="form-control" aria-label="Default select example" name="fk_pais">
                                 <?php
                                 include('../conec.php');
                                     $consultaPais = "SELECT * FROM pais";
