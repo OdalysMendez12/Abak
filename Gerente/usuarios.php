@@ -59,7 +59,7 @@ if (!isset($_SESSION['correo'])) {
                             <button class="btn btn-primary" data-toggle="modal" data-target="#CrearUser">Crear nuevo</button>
                         </div>
                             <br>
-                            <table class="table table-bordered table-hover table-striped table-condensed" id="miTabla">
+                            <table class="table-sm table-bordered table-hover table-striped table-condensed" id="miTabla">
                                 <thead>
                                     <tr>
                                         <th>Clave usuario</th>
