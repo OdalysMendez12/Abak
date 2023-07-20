@@ -12,6 +12,7 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -39,7 +40,7 @@ if (!isset($_SESSION['correo'])) {
     <!-- summernote -->
     <link rel="stylesheet" href="../template/plugins/summernote/summernote-bs4.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Países</title>
 </head>
 <body>
     <?php
@@ -54,7 +55,7 @@ if (!isset($_SESSION['correo'])) {
                     <div class="container">
                         <div class="col-mb-6">
                             <div class="col-9">
-                                <h1 class="m-2">Paises</h1>
+                                <h1 class="m-2">Países</h1>
                             </div>
                             <div class="box">
                 <div class="box-header">

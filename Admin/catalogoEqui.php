@@ -13,6 +13,8 @@ if (!isset($_SESSION['correo'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -106,7 +108,7 @@ if (!isset($_SESSION['correo'])) {
                                                             <input type="text" class="form-control input-lg" name="nombre" required="">
                                                         </div>
                                                         <label class="form-label">Estado:</label>
-                                                            <select class="form-select" aria-label="Default select example" name="fk_estado">
+                                                            <select class="form-control" aria-label="Default select example" name="fk_estado">
                                                                 <?php
                                                                 include('../conec.php');
                                                                     $consultaestados = "SELECT * FROM estados";
@@ -118,7 +120,7 @@ if (!isset($_SESSION['correo'])) {
                                                             </select>
                                                         </div>
                                                         <div class="modal-footer">
-                                                        <input type="submit" name="Enviar" value="Editar departemento" class="btn btn-primary" />
+                                                        <input type="submit" name="Enviar" value="Editar equipo" class="btn btn-primary" />
                                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                                                         </div>
                                                     </div>

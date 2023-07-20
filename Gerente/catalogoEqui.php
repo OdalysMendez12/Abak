@@ -12,6 +12,8 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -105,7 +107,7 @@ if (!isset($_SESSION['correo'])) {
                                                             <input type="text" class="form-control input-lg" name="nombre" required="">
                                                         </div>
                                                         <label class="form-label">Estado:</label>
-                                                            <select class="form-select" aria-label="Default select example" name="fk_estado">
+                                                            <select class="form-control" aria-label="Default select example" name="fk_estado">
                                                                 <?php
                                                                 include('../conec.php');
                                                                     $consultaestados = "SELECT * FROM estados";

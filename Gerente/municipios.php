@@ -12,6 +12,7 @@ if (!isset($_SESSION['correo'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables boostrap-->
@@ -85,7 +86,7 @@ if (!isset($_SESSION['correo'])) {
                                     <td><?php echo $fila["fk_estado"] ?></td>
                                     <!--Boton Eliminar Usuarios-->
                                 <td>
-                                    <button class="btn btn-success" style="margin-left: 20%;">
+                                    <button class="btn btn-success">
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarEst<?php echo $contador ?>">
                                         </i>
                                     </button>

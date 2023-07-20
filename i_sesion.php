@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+    <title>ABAK SOLUCIONES | Log in</title>
 
     <!-- Theme style -->
     <link rel="stylesheet" href="css/login.css">

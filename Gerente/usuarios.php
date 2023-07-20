@@ -15,7 +15,7 @@ if (!isset($_SESSION['correo'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ABAK SOLUCIONES</title>
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <!--datatables boostrap-->
     <link rel="stylesheet" href="../template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <!--datatables bootstrap responsive-->
@@ -79,12 +79,15 @@ if (!isset($_SESSION['correo'])) {
                                 <tbody>
                                     <?php
                                     include('../conec.php');/*Conexión a la Base de Datos*/
-                                    $Consulta = "SELECT usuario.clave_usuario, usuario.nombre,usuario.Apaterno,usuario.Amaterno, usuario.telefono, usuario.correo, departamento.nombre_dep AS fk_departamento, 
-                                    roles.rol AS fk_rol, puesto.nombre_puesto AS fk_puesto, sucursal.nombre_suc AS fk_sucursal, usuario.sexo  
-                                    FROM usuario INNER JOIN sucursal ON usuario.fk_sucursal = sucursal.id INNER JOIN puesto ON usuario.fk_puesto = puesto.id
+                                    $Consulta = "SELECT usuario.clave_usuario, usuario.nombre, usuario.Apaterno, usuario.Amaterno, usuario.telefono, usuario.correo,
+                                    departamento.nombre_dep AS fk_departamento, roles.rol AS fk_rol, puesto.nombre_puesto AS fk_puesto, 
+                                    sucursal.nombre_suc AS fk_sucursal, usuario.sexo, usuario.razon, usuario.activo  
+                                    FROM usuario 
+                                    INNER JOIN sucursal ON usuario.fk_sucursal = sucursal.id 
+                                    INNER JOIN puesto ON usuario.fk_puesto = puesto.id
                                     INNER JOIN departamento ON usuario.fk_departamento = departamento.id 
-                                    INNER JOIN roles ON usuario.fk_rol = roles.id";
-
+                                    INNER JOIN roles ON usuario.fk_rol = roles.id
+                                    WHERE usuario.activo = 1"; // Solo traer usuarios activos (activo = 1)
                                     $resultado = mysqli_query($conexion, $Consulta);
                                     $contador = 1;
                                     while ($fila = mysqli_fetch_array($resultado)) {

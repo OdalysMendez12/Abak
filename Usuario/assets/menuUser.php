@@ -8,21 +8,21 @@
         </li>
     </ul>
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
-    <ul class='navbar-nav ms-auto mb-2 mb-lg-0'>
-        <li class='nav-item-dropdown'>
-            <a href='#' class='nav-link dropdown-toggle second-text fw-bold' id='navbarDropdown'
-                role='button' data-bs-toggle='dropdown' aria-expanded='false'>
-                <i class='fas fa-user me-'></i> Hola, <?php echo $_SESSION['nombre'] ?>!
-            </a>
-            <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                <li class='dropdown-link'>
-                    <a href='admin.php'>Inicio</a>
-                </li>
-                <li class='dropdown-link'>
-                    <a href='../acciones/Log-out.php'>Logout</a>
-                </li>
-            </ul>
-        </li>
+        <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle second-text fw-bold" id="navbarDropdown"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user me-"></i> Hola, <?php echo $_SESSION['nombre'] ?>!
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="dropdown-link">
+                        <a href="admin.php">Inicio</a>
+                    </li>
+                    <li class="dropdown-link">
+                        <a href="../acciones/Log-out.php">Logout</a>
+                    </li>
+                </ul>
+            </li>
     </ul>
 </div>
 </nav>
