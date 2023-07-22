@@ -89,35 +89,28 @@ if (!isset($_SESSION['correo'])) {
                                         <i class="fas fa-pencil-alt" data-toggle="modal" data-target="#EditarEqui<?php echo $contador ?>">
                                         </i>
                                     </button>
-                                    <button class="btn btn-danger" style="margin-left: 30%;"><a target="_self" href="../acciones/eliminarEqui.php?clave_equipo=<?php echo $fila['clave_equipo'] ?>"><i class="fas fa-trash text-white"></i></a></button>
+                                    <button class="btn btn-danger">
+                                        <a onclick="eliminarEqui('<?php echo $fila['clave_equipo'] ?>')">
+                                            <i class="fas fa-trash text-white"></i>
+                                        </a>
+                                    </button>                                
                                 </td>
                                 </tr>
                                 <div class="modal fade" id="EditarEqui<?php echo $contador ?>">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-                                            <form action="../acciones/editarMun.php" method="POST">
+                                            <form action="../acciones/editarEqui.php" method="POST">
                                                 <div class="modal-body">
                                                     <h2>Editar equipo</h2>
                                                     <div class="box-body">
                                                         <div class="form-group">
                                                             <h2>ID:</h2>
-                                                            <input type="text" class="form-control input-lg" name="id" required="" value="<?php echo $fila['clave_equipo'] ?>" readonly>
+                                                            <input type="text" class="form-control input-lg" name="clave_equipo"  value="<?php echo $fila['clave_equipo'] ?>" readonly>
                                                         </div>
                                                         <div class="form-group">
                                                             <h2>Nombre:</h2>
                                                             <input type="text" class="form-control input-lg" name="nombre" required="">
                                                         </div>
-                                                        <label class="form-label">Estado:</label>
-                                                            <select class="form-control" aria-label="Default select example" name="fk_estado">
-                                                                <?php
-                                                                include('../conec.php');
-                                                                    $consultaestados = "SELECT * FROM estados";
-                                                                    $resultadoestados = mysqli_query($conexion, $consultaestados);
-                                                                    while ($fila = mysqli_fetch_array($resultadoestados)) {
-                                                                ?>  
-                                                            <option value="<?php echo $fila["id"] ?>"><?php echo $fila["nombre"] ?></option>
-                                                        <?php } ?>
-                                                            </select>
                                                         </div>
                                                         <div class="modal-footer">
                                                         <input type="submit" name="Enviar" value="Editar equipo" class="btn btn-primary" />
@@ -174,11 +167,31 @@ if (!isset($_SESSION['correo'])) {
         </div>
     </div>
 </div>
+    <script>
+        function eliminarEqui(id) {
+        Swal.fire({
+        title: '¿Estás seguro?',
+        text: 'Esta acción eliminará el equipo seleccionado.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Eliminar',
+        cancelButtonText: 'Cancelar'
+        }).then((result) => {
+        if (result.isConfirmed) {
+        // Redireccionar a la página de eliminación del usuario
+        window.location.href = '../acciones/eliminarEqui.php?clave_equipo=' + id;
+        }
+        });
+        }
+    </script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <!--Script para el lenguaje en español e inicializacion de datatables-->
-    <script src="tablas.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+        <!--Script para el lenguaje en español e inicializacion de datatables-->
+        <script src="tablas.js"></script>
         <!-- Resolve template/conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <script>
             $.widget.bridge('uibutton', $.ui.button)

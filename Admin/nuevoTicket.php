@@ -100,7 +100,7 @@ if (!isset($_SESSION['correo'])) {
 
                             <div class="col-lg-6">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="exampleInput">Documentos Adicionales</label>
+                                    <label class="form-label semibold" for="exampleInput">Documentos Adicionales (Solo imagenes)</label>
                                     <input type="file" name="documento" class="form-control" multiple>
                                 </fieldset>
                             </div>

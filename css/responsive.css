@@ -1,0 +1,237 @@
+/* Estilos para dispositivos móviles nosotros*/
+@media (max-width: 768px) {
+    .contenedor-qs {
+        width: 100%;
+        display: flex; /* Usar flexbox para alinear imagen y texto horizontalmente */
+        flex-direction: column; /* Alinear verticalmente en dispositivos móviles */
+        align-items: center; /* Centrar los elementos horizontalmente */
+        margin-bottom: 50px;
+    }
+
+    .descripcion-qs {
+        text-align: center; /* Centrar el texto en dispositivos móviles */
+        padding: 20px;
+    }
+
+    .imagen-qs {
+        width: 100%; /* Ajustar el tamaño de la imagen al ancho del contenedor */
+        max-width: 300px; /* Limitar el ancho máximo de la imagen */
+        margin-top: 20px; /* Añadir un espacio entre la imagen y el texto */
+    }
+
+    .descripcion-qs h1 {
+        font-size: 24px; /* Aumentar el tamaño del título */
+        margin-bottom: 10px; /* Añadir un espacio entre el título y el párrafo */
+    }
+
+    .descripcion-qs p {
+        font-size: 18px; /* Aumentar el tamaño del párrafo */
+        text-align: center;
+    }
+    /* Estilos para alinear verticalmente las cards */
+.contenedor-mvv {
+    display: flex;
+    justify-content: center; /* Alinear horizontalmente las cards */
+    align-items: center; /* Alinear verticalmente las cards */
+    height: 100vh; /* Altura del contenedor para centrar las cards en la pantalla */
+}
+
+.mvv {
+    display: flex;
+    flex-direction: column; /* Alinear las cards verticalmente */
+    margin-right: 45px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+
+/* Ajustar el tamaño del contenido de las cards */
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+}
+
+.card-front h3 {
+    font-size: 24px;
+}
+
+.card-back p {
+    font-size: 14px;
+}
+
+}
+
+/*Mesa de ayuda*/
+@media (max-width: 768px) {
+    .desc-hero{
+        font-size: 25px;
+        text-align: center;
+    }
+}
+/* Estilos generales (no mostrados nuevamente) */
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .niveles {
+        padding: 15px;
+    }
+
+    .container1, .container2, .container3 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos para pantallas medianas y grandes (más de 768px) */
+    /* Estilos generales (no mostrados nuevamente) */
+
+/* Estilos para pantallas pequeñas (hasta 768px) */
+@media screen and (max-width: 768px) {
+    .niveles {
+        padding: 15px;
+    }
+
+    .container1, .container2, .container3 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .titulito {
+        text-align: center;
+        font-family: 'Merriweather', serif;
+        font-size: 1.5rem;
+    }
+
+    .container1, .container2, .container3 {
+        background-color: #365ad3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .container2 {
+        background-color: rgba(73, 76, 245, 0.7);
+    }
+
+/* Estilos para pantallas medianas y grandes (más de 768px) */
+
+    .descripcion-mda {
+        grid-template-columns: repeat(2, 1fr); /* Restauramos el diseño de 2 columnas */
+    }
+    
+    .descripcion-mda h3 {
+        text-align: right; /* Alineamos el texto a la derecha en pantallas medianas y grandes */
+    }
+    
+    .descripcion-mda p {
+        padding-right: 10rem; /* Añadimos el padding derecho en pantallas medianas y grandes */
+        text-align: justify; /* Justificamos el texto en pantallas medianas y grandes */
+    }
+
+}
+
+
+/*SOporte tecnicooo*/
+@media screen and (max-width: 768px) {
+    .tittle{
+        text-align: center;
+    }
+    .contenedor-sn .imagen{
+        width: 300px;
+        height: 335px;
+        margin-right: 0;
+        float: right;
+        padding-right: 1.5rem;
+    }
+    .contenedor-sn .contenido-sn ul{
+        margin-left: 0;
+    }
+    .contenedor-sn .contenido-sn .texto-dos {
+        display: flex;
+        flex-direction: column; /* Cambiamos la dirección de flexión a vertical */
+        align-items: center; /* Alineamos las cards al centro verticalmente */
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    
+    .card {
+        border-radius: 20px;
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+    }
+    
+    .first-content,
+    .second-content {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .first-content span {
+        font-weight: bold;
+    }
+    
+    .second-content span {
+        font-style: italic;
+    }
+}
+
+/*SOPORTE TECNICOOOOOOO*/
+@media screen and (max-width: 768px) {
+    .contenedor-st .imagen{
+        display: none;
+    }
+    .contenedor-st{
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin: auto;
+    }
+    .contenedor-st h2{
+        text-align: center;
+        margin-left: 70px;
+    }
+    .contenedor-st ul{
+        text-align: justify;
+        margin-left: 0px;
+    }
+    .contenido-st{
+        display: none;
+    }
+    .tipo-servicio{
+        display: flex;
+        flex-direction: column; /* Cambiamos la dirección de flexión a vertical */
+        align-items: center; /* Alineamos las cards al centro verticalmente */
+    }
+    main{
+        font-family: 'Montserrat', sans-serif;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 30px;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 10px;
+        padding: 30px;
+        color: #100d6a;
+    }
+    .contenedor-st .comentario p{
+        font-size: 18px;
+    }
+}
+
