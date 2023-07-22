@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
 
     <title>ABAK SOLUCIONES | Log in</title>
 
@@ -13,6 +14,14 @@
 </head>
 
 <body class="hold-transition login-page">
+    <header class="head">
+        <nav class="nav">
+            <a href="index.html" class="logo nav-link"><img src="img/logo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link active">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="login-box">
         <div class="login-logo">
             <a href="i_sesion.php"><b>ABAK SOLUCIONES</a>

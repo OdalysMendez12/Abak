@@ -255,44 +255,6 @@ section .info-contacto .contenedor-contacto .textBox .contacto a:hover {
     padding: 10px;
 }
 
-/*----- Para pantallas -----*/
-@media only screen and (max-width: 1200px) {
-    section .info-contacto {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        position: relative;
-    }
-}
-
-/*----- Para tabletas -----*/
-@media only screen and (max-width: 760px) {
-    section .info-contacto .contenedor-contacto {
-        height: 300px;
-        padding: 20px;
-    }
-
-    section .info-contacto .contenedor-contacto .imagen-contacto {
-        display: none;
-    }
-}
-
-/*----- Para celulares -----*/
-
-@media only screen and (max-width: 550px) {
-    section .info-contacto .formulario {
-        margin-left: 0px;
-        width: 100%;
-    }
-
-    section .info-contacto .contenedor-contacto {
-        margin-bottom: 30px;
-    }
-
-    section .info-contacto .contenedor-contacto .textBox .contacto p {
-        font-size: 15px;
-
-    }
-}
-
 /*--------------------------------- FOOTER ---------------------------------*/
 .footer {
     width: 100%;

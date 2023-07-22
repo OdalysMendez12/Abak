@@ -1,0 +1,159 @@
+/*Servicios*/
+@media (max-width: 768px){
+    .descripcion-servicios {
+        width: 100%;
+        max-width: 800px; /* Opcional: limita el ancho máximo del elemento */
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .descripcion-servicios h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .descripcion-servicios p {
+        font-size: 18px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .servicios-abak {
+        margin: 20px; /* Reducir el margen para mejor visualización en dispositivos móviles */
+    }
+    section {
+        width: 100%; /* Ajustar el ancho del contenedor al 100% para ocupar el ancho completo */
+        height: auto; /* Ajustar la altura automática para que se ajuste al contenido */
+        display: block; /* Cambiar a bloque para que el contenido se muestre uno debajo del otro */
+    }
+    .swiper {
+        width: 100%; /* Ajustar el ancho del swiper al 100% para ocupar el ancho completo */
+    }
+    .swiper-slide {
+        width: 100%; /* Ajustar el ancho de las slides al 100% para ocupar el ancho completo */
+        max-width: 100%; /* Ajustar el ancho máximo de las slides al 100% para ocupar el ancho completo */
+        margin: 0 auto; /* Centrar la slide horizontalmente */
+        display: flex; /* Agregar display flex para alinear verticalmente el contenido */
+        justify-content: center; /* Centrar el contenido verticalmente */
+    }
+    .card {
+        flex: 0 0 95%; /* Establecer el ancho de las cards (puedes ajustar el valor según tus necesidades) */
+        margin: 10px; /* Añadir un pequeño margen entre las cards */
+    }
+    
+}
+
+/* Estilos para pantallas de celular formulario */
+@media screen and (max-width: 768px) {
+    section .info-contacto {
+        grid-template-columns: 1fr; /* Cambiamos a una sola columna */
+        gap: 10px;
+        padding: 20px;
+        border-radius: 20px; /* Ajustamos los bordes */
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    section .info-contacto .formulario {
+        width: 100%; /* Ancho completo */
+        margin-left: 0; /* Eliminamos el margen izquierdo */
+        width: 300px;
+    }
+
+    section .info-contacto .formulario form .info-usuario {
+        margin-bottom: 15px; /* Incrementamos el margen inferior */
+    }
+
+    section .info-contacto .formulario form input[type="submit"] {
+        width: 100%; /* Ancho completo */
+    }
+}
+
+
+/*CONSULTORIAAAAA*/
+@media screen and (max-width: 768px){
+    .title h1{
+        text-align: center;
+    }
+    .contenedor-consultoria .imagen{
+        width: 300px;
+        height: 340px;
+        margin-left: 20px;
+        float: right;
+        padding-right: 0;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+    .contenedor-consultoria .texto-uno{
+        margin-top: 35px;
+        text-align: justify;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contenedor-consultoria .cards-consultoria{
+        display: flex;
+        flex-direction: column; /* Cambiamos la dirección de flexión a vertical */
+        align-items: center; /* Alineamos las cards al centro verticalmente */
+    }
+}
+
+/*DISEÑO Y DESARROLLOOOOOOOOO*/
+@media screen and (max-width: 768px){
+    .contenedor-dyd .imagen{
+        width: 330px;
+        height: 270px;
+        float: left;
+        padding-right: 15px;
+    }
+    .contenido-dyd {
+        display: flex;
+        flex-direction: column; /* Cambiamos la dirección de flexión a vertical */
+        align-items: center; /* Alineamos las cards al centro verticalmente */
+    }
+    .card-container{
+        margin-top: 15px;
+        width: 320px;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    .contenedor-si .imagen{
+        width: 330px;
+        height: 270px;
+        float: left;
+        padding-right: 50px;
+        padding-left: 0;
+    }
+    .contenido-si{
+        display: flex;
+        flex-direction: column; /* Cambiamos la dirección de flexión a vertical */
+        align-items: center; /* Alineamos las cards al centro verticalmente */
+    }
+}
+
+/*MANTENIMIENTOOOO*/
+@media screen and (max-width: 768px){
+    .contenedor-mg .imagen{
+        width: 330px;
+        height: 270px;
+        float: left;
+        padding-right: 55px;
+        padding-left: 0;
+    }
+    .textos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto-dos {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contenido-mg {
+        display: none;
+    }
+}
